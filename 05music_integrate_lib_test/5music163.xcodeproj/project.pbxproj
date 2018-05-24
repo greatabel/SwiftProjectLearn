@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20D2DC9B1FF0F42B00766BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DC9A1FF0F42B00766BCA /* AppDelegate.swift */; };
+		20D2DC9D1FF0F42B00766BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DC9C1FF0F42B00766BCA /* ViewController.swift */; };
+		20D2DCA01FF0F42B00766BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DC9E1FF0F42B00766BCA /* Main.storyboard */; };
+		20D2DCA21FF0F42B00766BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA11FF0F42B00766BCA /* Assets.xcassets */; };
+		20D2DCA51FF0F42B00766BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */; };
+		20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DCED1FF0FD9B00766BCA /* AFSoundItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */; };
+		20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		20D2DDCD1FF0FEF200766BCA /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA41FF0FEF200766BCA /* KVNProgress.m */; };
+		20D2DDCE1FF0FEF200766BCA /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */; };
+		20D2DDCF1FF0FEF200766BCA /* KVNRotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */; };
+		20D2DDD01FF0FEF200766BCA /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */; };
+		20D2DDD31FF0FEF200766BCA /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */; };
+		20D2DDD41FF0FEF200766BCA /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */; };
+		20D2DDD51FF0FEF200766BCA /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */; };
+		2E1C70F526E159A6E3906E2D /* Pods_5music163.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58746A6AB4DD8ADCCC3F548 /* Pods_5music163.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12E364CBDAB62B447840B9A0 /* Pods-5music163.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5music163.release.xcconfig"; path = "Pods/Target Support Files/Pods-5music163/Pods-5music163.release.xcconfig"; sourceTree = "<group>"; };
+		20D2DC971FF0F42B00766BCA /* 5music163.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5music163.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D2DC9A1FF0F42B00766BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20D2DC9C1FF0F42B00766BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20D2DC9F1FF0F42B00766BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20D2DCA11FF0F42B00766BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20D2DCA41FF0F42B00766BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20D2DCA61FF0F42B00766BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D2DCDE1FF0F99F00766BCA /* music163-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "music163-Bridging-Header.h"; sourceTree = "<group>"; };
+		20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AFSoundManager.m"; sourceTree = "<group>"; };
+		20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundQueue.m; sourceTree = "<group>"; };
+		20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundItem.m; sourceTree = "<group>"; };
+		20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundPlayback.m; sourceTree = "<group>"; };
+		20D2DCE41FF0FD9B00766BCA /* AFSoundRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundRecord.h; sourceTree = "<group>"; };
+		20D2DCE51FF0FD9B00766BCA /* AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundManager.h; sourceTree = "<group>"; };
+		20D2DCE61FF0FD9B00766BCA /* AFSoundQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundQueue.h; sourceTree = "<group>"; };
+		20D2DCE71FF0FD9B00766BCA /* NSTimer+AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AFSoundManager.h"; sourceTree = "<group>"; };
+		20D2DCE81FF0FD9B00766BCA /* AFSoundItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundItem.h; sourceTree = "<group>"; };
+		20D2DCE91FF0FD9B00766BCA /* AFSoundPlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSoundPlayback.h; sourceTree = "<group>"; };
+		20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundRecord.m; sourceTree = "<group>"; };
+		20D2DDA41FF0FEF200766BCA /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
+		20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgressConfiguration.m; sourceTree = "<group>"; };
+		20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNRotationViewController.m; sourceTree = "<group>"; };
+		20D2DDA71FF0FEF200766BCA /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
+		20D2DDA81FF0FEF200766BCA /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		20D2DDA91FF0FEF200766BCA /* KVNRotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNRotationViewController.h; sourceTree = "<group>"; };
+		20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
+		20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		20D2DDB21FF0FEF200766BCA /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		20D2DDB31FF0FEF200766BCA /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KVNContrast.h"; sourceTree = "<group>"; };
+		20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		20D2DDB51FF0FEF200766BCA /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KVNContrast.m"; sourceTree = "<group>"; };
+		3B19CAF0BBC8D67605105916 /* Pods-5music163.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5music163.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5music163/Pods-5music163.debug.xcconfig"; sourceTree = "<group>"; };
+		D58746A6AB4DD8ADCCC3F548 /* Pods_5music163.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5music163.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20D2DC941FF0F42B00766BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1C70F526E159A6E3906E2D /* Pods_5music163.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20D2DC8E1FF0F42B00766BCA = {
+			isa = PBXGroup;
+			children = (
+				20D2DC991FF0F42B00766BCA /* 5music163 */,
+				20D2DC981FF0F42B00766BCA /* Products */,
+				C01BD2766E1135F5A0C19814 /* Pods */,
+				673CAC0247B78865B8099A0C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20D2DC981FF0F42B00766BCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DC971FF0F42B00766BCA /* 5music163.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20D2DC991FF0F42B00766BCA /* 5music163 */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DC9A1FF0F42B00766BCA /* AppDelegate.swift */,
+				20D2DC9C1FF0F42B00766BCA /* ViewController.swift */,
+				20D2DC9E1FF0F42B00766BCA /* Main.storyboard */,
+				20D2DCA11FF0F42B00766BCA /* Assets.xcassets */,
+				20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */,
+				20D2DD991FF0FEF200766BCA /* KVNProgress */,
+				20D2DCDF1FF0FD9B00766BCA /* AFSoundManager */,
+				20D2DCA61FF0F42B00766BCA /* Info.plist */,
+				20D2DCDE1FF0F99F00766BCA /* music163-Bridging-Header.h */,
+			);
+			path = 5music163;
+			sourceTree = "<group>";
+		};
+		20D2DCDF1FF0FD9B00766BCA /* AFSoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DCE01FF0FD9B00766BCA /* NSTimer+AFSoundManager.m */,
+				20D2DCE11FF0FD9B00766BCA /* AFSoundQueue.m */,
+				20D2DCE21FF0FD9B00766BCA /* AFSoundItem.m */,
+				20D2DCE31FF0FD9B00766BCA /* AFSoundPlayback.m */,
+				20D2DCE41FF0FD9B00766BCA /* AFSoundRecord.h */,
+				20D2DCE51FF0FD9B00766BCA /* AFSoundManager.h */,
+				20D2DCE61FF0FD9B00766BCA /* AFSoundQueue.h */,
+				20D2DCE71FF0FD9B00766BCA /* NSTimer+AFSoundManager.h */,
+				20D2DCE81FF0FD9B00766BCA /* AFSoundItem.h */,
+				20D2DCE91FF0FD9B00766BCA /* AFSoundPlayback.h */,
+				20D2DCEA1FF0FD9B00766BCA /* AFSoundRecord.m */,
+			);
+			path = AFSoundManager;
+			sourceTree = "<group>";
+		};
+		20D2DD991FF0FEF200766BCA /* KVNProgress */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DDA31FF0FEF200766BCA /* Classes */,
+				20D2DDAA1FF0FEF200766BCA /* Resources */,
+				20D2DDB01FF0FEF200766BCA /* Categories */,
+			);
+			path = KVNProgress;
+			sourceTree = "<group>";
+		};
+		20D2DDA31FF0FEF200766BCA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DDA41FF0FEF200766BCA /* KVNProgress.m */,
+				20D2DDA51FF0FEF200766BCA /* KVNProgressConfiguration.m */,
+				20D2DDA61FF0FEF200766BCA /* KVNRotationViewController.m */,
+				20D2DDA71FF0FEF200766BCA /* KVNProgress.h */,
+				20D2DDA81FF0FEF200766BCA /* KVNProgressConfiguration.h */,
+				20D2DDA91FF0FEF200766BCA /* KVNRotationViewController.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		20D2DDAA1FF0FEF200766BCA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DDAB1FF0FEF200766BCA /* KVNProgressView.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20D2DDB01FF0FEF200766BCA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				20D2DDB11FF0FEF200766BCA /* UIImage+KVNImageEffects.m */,
+				20D2DDB21FF0FEF200766BCA /* UIImage+KVNEmpty.h */,
+				20D2DDB31FF0FEF200766BCA /* UIColor+KVNContrast.h */,
+				20D2DDB41FF0FEF200766BCA /* UIImage+KVNEmpty.m */,
+				20D2DDB51FF0FEF200766BCA /* UIImage+KVNImageEffects.h */,
+				20D2DDB61FF0FEF200766BCA /* UIColor+KVNContrast.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		673CAC0247B78865B8099A0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D58746A6AB4DD8ADCCC3F548 /* Pods_5music163.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C01BD2766E1135F5A0C19814 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B19CAF0BBC8D67605105916 /* Pods-5music163.debug.xcconfig */,
+				12E364CBDAB62B447840B9A0 /* Pods-5music163.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20D2DC961FF0F42B00766BCA /* 5music163 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20D2DCA91FF0F42B00766BCA /* Build configuration list for PBXNativeTarget "5music163" */;
+			buildPhases = (
+				AE9B1BDB9D0FFDEB76E0B1FE /* [CP] Check Pods Manifest.lock */,
+				20D2DC931FF0F42B00766BCA /* Sources */,
+				20D2DC941FF0F42B00766BCA /* Frameworks */,
+				20D2DC951FF0F42B00766BCA /* Resources */,
+				E2D746B45B0B25C6F00E0885 /* [CP] Embed Pods Frameworks */,
+				C245B8BF944249D94BF2E1FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5music163;
+			productName = 5music163;
+			productReference = 20D2DC971FF0F42B00766BCA /* 5music163.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20D2DC8F1FF0F42B00766BCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = luminagic;
+				TargetAttributes = {
+					20D2DC961FF0F42B00766BCA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 20D2DC921FF0F42B00766BCA /* Build configuration list for PBXProject "5music163" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20D2DC8E1FF0F42B00766BCA;
+			productRefGroup = 20D2DC981FF0F42B00766BCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20D2DC961FF0F42B00766BCA /* 5music163 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20D2DC951FF0F42B00766BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D2DCA51FF0F42B00766BCA /* LaunchScreen.storyboard in Resources */,
+				20D2DCA21FF0F42B00766BCA /* Assets.xcassets in Resources */,
+				20D2DCA01FF0F42B00766BCA /* Main.storyboard in Resources */,
+				20D2DDD01FF0FEF200766BCA /* KVNProgressView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE9B1BDB9D0FFDEB76E0B1FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-5music163-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C245B8BF944249D94BF2E1FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-5music163/Pods-5music163-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D746B45B0B25C6F00E0885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-5music163/Pods-5music163-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KGFloatingDrawer/KGFloatingDrawer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KGFloatingDrawer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-5music163/Pods-5music163-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20D2DC931FF0F42B00766BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D2DCEF1FF0FD9B00766BCA /* AFSoundRecord.m in Sources */,
+				20D2DDD31FF0FEF200766BCA /* UIImage+KVNImageEffects.m in Sources */,
+				20D2DCED1FF0FD9B00766BCA /* AFSoundItem.m in Sources */,
+				20D2DDCD1FF0FEF200766BCA /* KVNProgress.m in Sources */,
+				20D2DDD51FF0FEF200766BCA /* UIColor+KVNContrast.m in Sources */,
+				20D2DC9D1FF0F42B00766BCA /* ViewController.swift in Sources */,
+				20D2DDCF1FF0FEF200766BCA /* KVNRotationViewController.m in Sources */,
+				20D2DC9B1FF0F42B00766BCA /* AppDelegate.swift in Sources */,
+				20D2DCEE1FF0FD9B00766BCA /* AFSoundPlayback.m in Sources */,
+				20D2DCEC1FF0FD9B00766BCA /* AFSoundQueue.m in Sources */,
+				20D2DDD41FF0FEF200766BCA /* UIImage+KVNEmpty.m in Sources */,
+				20D2DCEB1FF0FD9B00766BCA /* NSTimer+AFSoundManager.m in Sources */,
+				20D2DDCE1FF0FEF200766BCA /* KVNProgressConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20D2DC9E1FF0F42B00766BCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20D2DC9F1FF0F42B00766BCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20D2DCA31FF0F42B00766BCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20D2DCA41FF0F42B00766BCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20D2DCA71FF0F42B00766BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20D2DCA81FF0F42B00766BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20D2DCAA1FF0F42B00766BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B19CAF0BBC8D67605105916 /* Pods-5music163.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32DD42UWD5;
+				INFOPLIST_FILE = 5music163/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-music163";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music163-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20D2DCAB1FF0F42B00766BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E364CBDAB62B447840B9A0 /* Pods-5music163.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32DD42UWD5;
+				INFOPLIST_FILE = 5music163/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luminagic.-music163";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "music163-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20D2DC921FF0F42B00766BCA /* Build configuration list for PBXProject "5music163" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20D2DCA71FF0F42B00766BCA /* Debug */,
+				20D2DCA81FF0F42B00766BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20D2DCA91FF0F42B00766BCA /* Build configuration list for PBXNativeTarget "5music163" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20D2DCAA1FF0F42B00766BCA /* Debug */,
+				20D2DCAB1FF0F42B00766BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20D2DC8F1FF0F42B00766BCA /* Project object */;
+}
