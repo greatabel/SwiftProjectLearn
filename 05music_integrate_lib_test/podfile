@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target '5music163' do
+
+    pod 'Alamofire'
+    pod 'KGFloatingDrawer', :git => 'https://github.com/KyleGoddard/KGFloatingDrawer', :branch => 'swift-3-up'
+    pod 'Reveal-iOS-SDK'
+
+end
