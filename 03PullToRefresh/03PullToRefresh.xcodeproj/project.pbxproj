@@ -13,6 +13,7 @@
 		202FC07520B95C8700BECFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FC07320B95C8700BECFF2 /* LaunchScreen.storyboard */; };
 		202FC07D20B95E0700BECFF2 /* RefreshingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FC07C20B95E0700BECFF2 /* RefreshingTableViewController.swift */; };
 		202FC07F20B9600800BECFF2 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FC07E20B9600800BECFF2 /* RefreshView.swift */; };
+		202FC08120B9A33F00BECFF2 /* RefreshItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FC08020B9A33E00BECFF2 /* RefreshItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		202FC07620B95C8700BECFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202FC07C20B95E0700BECFF2 /* RefreshingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshingTableViewController.swift; sourceTree = "<group>"; };
 		202FC07E20B9600800BECFF2 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		202FC08020B9A33E00BECFF2 /* RefreshItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				202FC07620B95C8700BECFF2 /* Info.plist */,
 				202FC07C20B95E0700BECFF2 /* RefreshingTableViewController.swift */,
 				202FC07E20B9600800BECFF2 /* RefreshView.swift */,
+				202FC08020B9A33E00BECFF2 /* RefreshItem.swift */,
 			);
 			path = 03PullToRefresh;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				202FC07F20B9600800BECFF2 /* RefreshView.swift in Sources */,
 				202FC07D20B95E0700BECFF2 /* RefreshingTableViewController.swift in Sources */,
+				202FC08120B9A33F00BECFF2 /* RefreshItem.swift in Sources */,
 				202FC06B20B95C8700BECFF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
