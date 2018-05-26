@@ -14,6 +14,9 @@ class RefreshingTableViewController: UITableViewController {
         view.insertSubview(refreshView, at: 0)
     }
 
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        refreshView.scrollViewDidScroll(scrollView)
+    }
 
 
     // MARK: - Table view data source
