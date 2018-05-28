@@ -16,7 +16,7 @@ class RefreshItem {
         view.center = CGPoint(
             x: centerStart.x + (centerEnd.x - centerStart.x) * percentage,
             y: centerStart.y + (centerEnd.y - centerStart.y) * percentage)
-        print("(view.center.y = \(view.center.y)")
+//        print("(view.center.y = \(view.center.y)")
         if view.center.y > 180 {
             view.isHidden = true
         } else {

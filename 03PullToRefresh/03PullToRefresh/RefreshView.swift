@@ -97,8 +97,10 @@ class RefreshView: UIView, UIScrollViewDelegate {
     }
 
     func endRefreshing() {
+        print("endRefreshing0")
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
             self.scrollView.contentInset.top -= kSceneHeight
+            print("endRefreshing")
         }) { (_) -> Void in
             self.isRefreshing = false
         }

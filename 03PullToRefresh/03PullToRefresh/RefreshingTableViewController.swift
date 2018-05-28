@@ -17,6 +17,7 @@ class RefreshingTableViewController: UITableViewController, RefreshViewDelegate 
         refreshView = RefreshView(frame: CGRect(x: 0, y: -kRefreshViewHeight,
                                                 width: (view.bounds).width,
                                                 height: kRefreshViewHeight), scrollView: tableView)
+        refreshView.delegate = self
         view.insertSubview(refreshView, at: 0)
     }
 
