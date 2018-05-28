@@ -97,10 +97,10 @@ class RefreshView: UIView, UIScrollViewDelegate {
     }
 
     func endRefreshing() {
-        print("endRefreshing0")
+//        print("endRefreshing0")
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
             self.scrollView.contentInset.top -= kSceneHeight
-            print("endRefreshing")
+//            print("endRefreshing")
         }) { (_) -> Void in
             self.isRefreshing = false
         }
@@ -110,7 +110,7 @@ class RefreshView: UIView, UIScrollViewDelegate {
         if !isRefreshing && progress == 1 {
             beginRefreshing()
             targetContentOffset.pointee.y = -scrollView.contentInset.top
-            print("delegate?.refreshViewDidRefresh")
+//            print("delegate?.refreshViewDidRefresh")
             delegate?.refreshViewDidRefresh(refreshView: self)
         }
     }
