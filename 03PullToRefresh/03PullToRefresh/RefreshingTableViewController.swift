@@ -2,7 +2,13 @@ import UIKit
 
 private let kRefreshViewHeight: CGFloat = 200
 
-class RefreshingTableViewController: UITableViewController {
+class RefreshingTableViewController: UITableViewController, RefreshViewDelegate {
+
+    func refreshViewDidRefresh(refreshView: RefreshView) {
+        sleep(3)
+        refreshView.endRefreshing()
+    }
+
     private var refreshView : RefreshView!
 
     override func viewDidLoad() {
@@ -18,6 +24,9 @@ class RefreshingTableViewController: UITableViewController {
         refreshView.scrollViewDidScroll(scrollView)
     }
 
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        refreshView.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
 
     // MARK: - Table view data source
 

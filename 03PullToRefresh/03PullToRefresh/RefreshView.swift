@@ -1,5 +1,9 @@
 import UIKit
 
+protocol RefreshViewDelegate: class {
+    func refreshViewDidRefresh(refreshView: RefreshView)
+}
+
 private let kSceneHeight: CGFloat = 180
 
 class RefreshView: UIView, UIScrollViewDelegate {
@@ -7,6 +11,9 @@ class RefreshView: UIView, UIScrollViewDelegate {
     private unowned var scrollView : UIScrollView
     private var progress: CGFloat = 0.0
     var refreshItems = [RefreshItem]()
+    weak var delegate: RefreshViewDelegate?
+
+    var isRefreshing = false
 
     init(frame: CGRect, scrollView: UIScrollView) {
         self.scrollView = scrollView
@@ -64,6 +71,10 @@ class RefreshView: UIView, UIScrollViewDelegate {
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isRefreshing {
+            return
+        }
+        
         // 1. 先拿到刷新试图可见区域高度
         let refreshViewVisibleHeight = max(0,
                                            -scrollView.contentOffset.y - scrollView.contentInset.top)
@@ -75,5 +86,30 @@ class RefreshView: UIView, UIScrollViewDelegate {
         updateBackgroundColor()
         //4. 根据进度来更新图片位置
         updateRefreshItemPositions()
+    }
+
+    func beginRefreshing() {
+        isRefreshing = true
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
+            self.scrollView.contentInset.top += kSceneHeight
+        }) { (_) -> Void in
+        }
+    }
+
+    func endRefreshing() {
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: { () -> Void in
+            self.scrollView.contentInset.top -= kSceneHeight
+        }) { (_) -> Void in
+            self.isRefreshing = false
+        }
+    }
+
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if !isRefreshing && progress == 1 {
+            beginRefreshing()
+            targetContentOffset.pointee.y = -scrollView.contentInset.top
+            print("delegate?.refreshViewDidRefresh")
+            delegate?.refreshViewDidRefresh(refreshView: self)
+        }
     }
 }
