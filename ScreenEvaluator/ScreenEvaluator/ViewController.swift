@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
     }
     
+
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.animals.count
@@ -37,6 +38,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // set the text from the data model
         cell.textLabel?.text = self.animals[indexPath.row]
+        
+        let bgColors = [UIColor.darkGray, UIColor.red, UIColor.green, UIColor.blue]
+        let bgColor = bgColors[indexPath.row]
+        cell.contentView.backgroundColor = bgColor
         
         return cell
     }
