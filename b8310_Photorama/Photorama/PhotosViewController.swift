@@ -46,7 +46,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
 
         //download image data
          store.fetchImage(for: photo) { (result) -> Void in
-            guard let photoIndex = self.photoDataSource.photos.index(of: photo),
+            guard let photoIndex = self.photoDataSource.photos.firstIndex(of: photo),
                 case let .success(image) = result else {
                     return
             }
