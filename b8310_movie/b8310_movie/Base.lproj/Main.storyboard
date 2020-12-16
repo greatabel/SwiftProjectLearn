@@ -49,7 +49,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Movies" id="yxa-i4-xI5"/>
                     <connections>
-                        <segue destination="xEP-YV-KcN" kind="show" identifier="showDetail_segue" id="wUy-Zi-ims"/>
+                        <segue destination="xEP-YV-KcN" kind="show" identifier="showDetail_segue" id="QyP-6E-vH8"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KF4-16-hcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

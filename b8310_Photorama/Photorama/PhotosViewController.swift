@@ -39,7 +39,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
         
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         let photo = photoDataSource.photos[indexPath.row]
@@ -58,6 +58,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
+    
+    
 
 //    func updateImageView(for photo: Photo) {
 //        store.fetchImage(for: photo) {

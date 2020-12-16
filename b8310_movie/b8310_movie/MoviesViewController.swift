@@ -7,9 +7,15 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 class MoviesViewController: UICollectionViewController {
+    
+    var store: PhotoStore! = PhotoStore()
+
+    let photoDataSource = PhotoDataSource()
+    var count: Int = 0
+    
     // https://ithelp.ithome.com.tw/articles/10223501
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +24,11 @@ class MoviesViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.dataSource = photoDataSource
+        self.collectionView.delegate = self
+        updateDataSource()
+        
 //        let width = (collectionView.bounds.width - 1 * 2) / 3
 //        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
 //        flowLayout?.itemSize = CGSize(width: width, height: width)
@@ -43,9 +53,44 @@ class MoviesViewController: UICollectionViewController {
     }
 
     @objc func addTapped() {
-        print("here tapped ")
+        
+        store.saveNewPhoto(photoID: String(count), url: "http://clipart-library.com/img/1759126.png")
+        count += 1
+        print("here tapped count=\(count)")
+        // https://stackoverflow.com/questions/27517632/how-to-create-a-delay-in-swift
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.viewDidLoad()
+        }
+       
+//        performSegue(withIdentifier: "showDetail_segue", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        print("viewWillAppear")
+        self.viewDidLoad()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetail_segue", sender: self)
     }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare")
+        switch segue.identifier {
+        case "showDetail_segue"?:
+            if let selectedIndexPath =
+                collectionView.indexPathsForSelectedItems?.first {
+                let photo = photoDataSource.photos[selectedIndexPath.row]
+                let destinationVC = segue.destination as! DetailViewController
+                destinationVC.photo = photo
+                destinationVC.store = store
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -64,28 +109,74 @@ class MoviesViewController: UICollectionViewController {
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 8
-    }
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return 8
+//    }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+////
+////        // Configure the cell
+////        var imageview:UIImageView=UIImageView(frame: CGRect(x: 50, y: 50, width: 150, height: 222));
+////
+////        var img : UIImage? = UIImage(named:"movie_reel.png")
+////        imageview.image = img
+////
+////        cell.contentView.addSubview(imageview)
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! MovieCell
 //
 //        // Configure the cell
-//        var imageview:UIImageView=UIImageView(frame: CGRect(x: 50, y: 50, width: 150, height: 222));
+////        cell.imageView.image = UIImage(named: "pic\(indexPath.item)")
+//        cell.imageView.image = UIImage(named: "movie_reel.png")
 //
-//        var img : UIImage? = UIImage(named:"movie_reel.png")
-//        imageview.image = img
-//
-//        cell.contentView.addSubview(imageview)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! MovieCell
-        
-        // Configure the cell
-//        cell.imageView.image = UIImage(named: "pic\(indexPath.item)")
-        cell.imageView.image = UIImage(named: "movie_reel.png")
+//        return cell
+//    }
     
-        return cell
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        print("---- here 0 ---")
+        let photo = photoDataSource.photos[indexPath.row]
+        
+//        var default_image : UIImage? = UIImage(named:"movie_reel.png")
+        //download image data
+         store.fetchImage(for: photo) { (result) -> Void in
+            guard let photoIndex = self.photoDataSource.photos.firstIndex(of: photo),
+                case let .success(image) = result else {
+//                print("---- here 1 ---")
+//                if let cell = self.collectionView.cellForItem(at: indexPath) as?
+//                    MovieCell {
+//                    cell.update(with: default_image)
+//                }
+//
+                return
+                
+            }
+            
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as?
+                MovieCell {
+                cell.update(with: image)
+            }
+           
+            
+        }
+        
+    }
+    
+    private func updateDataSource() {
+        
+        store.fetchAllPhotos {
+            (photosResult) in
+            switch photosResult {
+            case let .success(photos):
+                self.photoDataSource.photos = photos
+            case .failure:
+                self.photoDataSource.photos.removeAll()
+            }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+        }
     }
 
     // MARK: UICollectionViewDelegate

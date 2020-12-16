@@ -8,11 +8,26 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var photo: Photo! {
+        didSet {
+//            navigationItem.title = photo.title
+        }
+    }
+    var store: PhotoStore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        store.fetchImage(for: photo) { (result) -> Void in
+//            switch result {
+//            case let .success(image):
+//                print(image)
+//            case let .failure(error):
+//                print("Error fetching image for photo: \(error)")
+//            }
+//        }
     }
     
     var year: String = "app loaded";
@@ -63,12 +78,20 @@ class DetailViewController: UIViewController {
                                                     let year = convertedJsonIntoDict["Year"]
                                                     let id = convertedJsonIntoDict["imdbID"]
                                                     let plot = convertedJsonIntoDict["Plot"]
+                                                    let poster = convertedJsonIntoDict["Poster"]
                                                     print(year ?? "userId could not be read")
+                                                    print("poster=\(poster)")
                                                     self.year = year as! String
                                                     self.id = id as! String
                                                     self.plot = plot as! String
                                                     self.doLabelChange()
-                                                    
+                                                    print("detail photoid=\(self.photo.photoID)")
+//
+                                                self.photo.remoteURL = URL(string: poster as! String) as NSObject?
+                                                self.store.UpdateImage(photo: self.photo)
+
+                                                   
+                                                            
                                                 }
                                      } catch let error as NSError {
                                                 print(error.localizedDescription)
