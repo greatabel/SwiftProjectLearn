@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesCollectionViewCell: UICollectionViewCell {
+class MovieCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
 //    @IBOutlet var spinner: UIActivityIndicatorView!
 

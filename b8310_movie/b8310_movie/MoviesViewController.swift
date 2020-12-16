@@ -79,7 +79,7 @@ class MoviesViewController: UICollectionViewController {
 //        imageview.image = img
 //
 //        cell.contentView.addSubview(imageview)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! MoviesCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! MovieCell
         
         // Configure the cell
 //        cell.imageView.image = UIImage(named: "pic\(indexPath.item)")
