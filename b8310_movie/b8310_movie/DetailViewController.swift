@@ -15,7 +15,15 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var txtInput: UITextField!
+    
+    @IBAction func btn_search(_ sender: Any) {
+        let movie_name = txtInput.text
+        if movie_name != nil {
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
