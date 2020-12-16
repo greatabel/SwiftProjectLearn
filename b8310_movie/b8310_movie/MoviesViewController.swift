@@ -43,7 +43,8 @@ class MoviesViewController: UICollectionViewController {
     }
 
     @objc func addTapped() {
-        print("here tapped")
+        print("here tapped ")
+        performSegue(withIdentifier: "showDetail_segue", sender: self)
     }
     /*
     // MARK: - Navigation
