@@ -10,7 +10,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MoviesViewController: UICollectionViewController {
-
+    // https://ithelp.ithome.com.tw/articles/10223501
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,13 +19,27 @@ class MoviesViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        
+//        let width = (collectionView.bounds.width - 1 * 2) / 3
+//        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+//        flowLayout?.itemSize = CGSize(width: width, height: width)
+//        flowLayout?.estimatedItemSize = .zero
+//
         // Do any additional setup after loading the view.
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
         let item1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addTapped))
-        //此处使用的图标UIBarButtonSystemItem是一个枚举.大家可以尝试一下其他值出来是什么
+        //
         self.navigationItem.rightBarButtonItem = item1
+        
+        let itemSpace: CGFloat = 2
+        let columnCount: CGFloat = 3
+        let inset: CGFloat = 2
+        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let width = floor((collectionView.bounds.width - itemSpace * (columnCount-1) - inset * 2) / columnCount)
+        flowLayout?.itemSize = CGSize(width: width, height: width*1.5)
+        flowLayout?.estimatedItemSize = .zero
+        flowLayout?.minimumInteritemSpacing = itemSpace
+        flowLayout?.minimumLineSpacing = itemSpace
+        flowLayout?.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
 
     @objc func addTapped() {
@@ -45,19 +59,30 @@ class MoviesViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 8
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//
+//        // Configure the cell
+//        var imageview:UIImageView=UIImageView(frame: CGRect(x: 50, y: 50, width: 150, height: 222));
+//
+//        var img : UIImage? = UIImage(named:"movie_reel.png")
+//        imageview.image = img
+//
+//        cell.contentView.addSubview(imageview)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! MoviesCollectionViewCell
+        
         // Configure the cell
+//        cell.imageView.image = UIImage(named: "pic\(indexPath.item)")
+        cell.imageView.image = UIImage(named: "movie_reel.png")
     
         return cell
     }
