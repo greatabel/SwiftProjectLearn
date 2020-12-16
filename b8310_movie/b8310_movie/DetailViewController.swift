@@ -15,7 +15,9 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var ret: String = "app loaded";
+    var year: String = "app loaded";
+    var id: String = "app loaded";
+    var plot: String = "app loaded";
     @IBOutlet weak var txtInput: UITextField!
     
     @IBOutlet weak var lbl_year: UILabel!
@@ -43,7 +45,7 @@ class DetailViewController: UIViewController {
                         data, response, error in
                         if error != nil {
                             print("Error -> \(String(describing: error))");
-                            self.ret = "\(String(describing: error))";
+//                            self.ret = "\(String(describing: error))";
                         }
                         if let httpResponse = response as? HTTPURLResponse {
                             print("statusCode: \(httpResponse.statusCode)");
@@ -59,8 +61,12 @@ class DetailViewController: UIViewController {
                                                     
                                                     // Get value by key
                                                     let year = convertedJsonIntoDict["Year"]
+                                                    let id = convertedJsonIntoDict["imdbID"]
+                                                    let plot = convertedJsonIntoDict["Plot"]
                                                     print(year ?? "userId could not be read")
-                                                self.ret = year as! String
+                                                    self.year = year as! String
+                                                    self.id = id as! String
+                                                    self.plot = plot as! String
                                                     self.doLabelChange()
                                                     
                                                 }
@@ -70,21 +76,21 @@ class DetailViewController: UIViewController {
 
                                 }
                             } else {
-                                self.ret = "error \(httpResponse.statusCode)"
+//                                self.ret = "error \(httpResponse.statusCode)"
                             }
                         }
                     }
 
                     task.resume();
-                } catch {
-                    print(error);
                 }
         }
     }
     
     func doLabelChange() {
         DispatchQueue.main.async {
-               self.lbl_year.text = self.ret
+               self.lbl_year.text = self.year
+               self.lbl_ID.text  = self.id
+               self.lbl_plot.text = self.plot
             }
     }
     
