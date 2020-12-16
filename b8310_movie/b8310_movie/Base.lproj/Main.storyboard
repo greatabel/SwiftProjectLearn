@@ -133,6 +133,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="urf-6C-L09"/>
                     <connections>
+                        <outlet property="lbl_ID" destination="bjg-H3-q1H" id="tDf-MU-SMl"/>
+                        <outlet property="lbl_plot" destination="ndc-hd-2WN" id="hvC-RS-UCG"/>
+                        <outlet property="lbl_year" destination="ZDZ-wE-9bU" id="gIc-Cv-i9T"/>
                         <outlet property="txtInput" destination="x60-4p-deC" id="aH4-V1-B3U"/>
                     </connections>
                 </viewController>
