@@ -1,3 +1,5 @@
+Movies App
+
 
 IMDb
 Need a Mac? See Student Resources.
@@ -14,6 +16,7 @@ Source Control: Create Git repository on my Mac: Unchecked
 Add the following statement of authorship as a comment to the top of MoviesViewController.swift replacing Student Name and 123456789 with your name and student number. Failure to include a statement of authorship will result in a grade of 0. These two lines must be the first two lines of the file.
 I, Student Name, student number 123456789, certify that this material is my original work. No other person's work has been used without due acknowledgement and I have not made my work available to anyone else.
 Images for app: 03_imdb_images.zip. Configure the AppIcon and add the other image to the asset catalog, it will be used as a default when no movie poster is available..
+
 Screenshots
 When the app first launches it will look like this.
 
