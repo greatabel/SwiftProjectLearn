@@ -80,15 +80,17 @@ class DetailViewController: UIViewController {
                                                     let plot = convertedJsonIntoDict["Plot"]
                                                     let poster = convertedJsonIntoDict["Poster"]
                                                     print(year ?? "userId could not be read")
-                                                    print("poster=\(poster)")
-                                                    self.year = year as! String
-                                                    self.id = id as! String
-                                                    self.plot = plot as! String
+                                                    print(poster ?? "userId could not be read")
+                                                    self.year = (year ?? "Not found") as! String
+                                                    self.id = (id ?? "") as! String
+                                                    self.plot = (plot ?? "") as! String
                                                     self.doLabelChange()
                                                     print("detail photoid=\(self.photo.photoID)")
-//
-                                                self.photo.remoteURL = URL(string: poster as! String) as NSObject?
-                                                self.store.UpdateImage(photo: self.photo)
+                                                if poster != nil {
+                                                    self.photo.remoteURL = URL(string: poster as! String) as NSObject?
+                                                    self.store.UpdateImage(photo: self.photo)
+                                                }
+
 
                                                    
                                                             

@@ -38,7 +38,7 @@
 		B54198BA258A1510005B3932 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		B54198C4258A2AFF005B3932 /* Photorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photorama.xcdatamodel; sourceTree = "<group>"; };
 		B560649125890EFD00D1E65D /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
-		B5ABBBF12588E67400224C3D /* b8310_movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = b8310_movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5ABBBF12588E67400224C3D /* assignment3_movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment3_movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ABBBF42588E67400224C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ABBBF62588E67400224C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5ABBBF82588E67400224C3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		B5ABBBF22588E67400224C3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5ABBBF12588E67400224C3D /* b8310_movie.app */,
+				B5ABBBF12588E67400224C3D /* assignment3_movie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5ABBBF02588E67400224C3D /* b8310_movie */ = {
+		B5ABBBF02588E67400224C3D /* assignment3_movie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5ABBC052588E67700224C3D /* Build configuration list for PBXNativeTarget "b8310_movie" */;
+			buildConfigurationList = B5ABBC052588E67700224C3D /* Build configuration list for PBXNativeTarget "assignment3_movie" */;
 			buildPhases = (
 				B5ABBBED2588E67400224C3D /* Sources */,
 				B5ABBBEE2588E67400224C3D /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = b8310_movie;
+			name = assignment3_movie;
 			productName = b8310_movie;
-			productReference = B5ABBBF12588E67400224C3D /* b8310_movie.app */;
+			productReference = B5ABBBF12588E67400224C3D /* assignment3_movie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B5ABBBEC2588E67400224C3D /* Build configuration list for PBXProject "b8310_movie" */;
+			buildConfigurationList = B5ABBBEC2588E67400224C3D /* Build configuration list for PBXProject "assignment3_movie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5ABBBF02588E67400224C3D /* b8310_movie */,
+				B5ABBBF02588E67400224C3D /* assignment3_movie */,
 			);
 		};
 /* End PBXProject section */
@@ -366,7 +366,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5ABBBEC2588E67400224C3D /* Build configuration list for PBXProject "b8310_movie" */ = {
+		B5ABBBEC2588E67400224C3D /* Build configuration list for PBXProject "assignment3_movie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5ABBC032588E67700224C3D /* Debug */,
@@ -375,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5ABBC052588E67700224C3D /* Build configuration list for PBXNativeTarget "b8310_movie" */ = {
+		B5ABBC052588E67700224C3D /* Build configuration list for PBXNativeTarget "assignment3_movie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5ABBC062588E67700224C3D /* Debug */,
