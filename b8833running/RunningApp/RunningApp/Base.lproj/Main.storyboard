@@ -139,6 +139,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workout" image="circle.lefthalf.fill" catalog="system" id="hhU-Yt-aRh"/>
+                    <connections>
+                        <outlet property="lblDistance" destination="ndg-hD-Iek" id="lpu-d0-wL5"/>
+                        <outlet property="lblTime" destination="BIi-EB-Ilh" id="5NH-RT-KyL"/>
+                        <outlet property="resumeBtn" destination="3gs-i3-EUC" id="qDZ-Nb-v51"/>
+                        <outlet property="saveBtn" destination="FdU-Bf-zb5" id="13n-ZJ-ShS"/>
+                        <outlet property="startBtn" destination="fQv-x2-xPK" id="QCH-Tu-7uL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJA-jT-i42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
