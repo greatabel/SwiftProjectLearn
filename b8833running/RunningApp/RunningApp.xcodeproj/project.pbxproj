@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B58D770925A2354A00FB6E70 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D770825A2354A00FB6E70 /* FormatDisplay.swift */; };
 		C938738525232CCF0091BDDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938738425232CCF0091BDDD /* AppDelegate.swift */; };
 		C938738725232CCF0091BDDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938738625232CCF0091BDDD /* SceneDelegate.swift */; };
 		C938738925232CCF0091BDDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938738825232CCF0091BDDD /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B58D770825A2354A00FB6E70 /* FormatDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
 		C938738125232CCF0091BDDD /* RunningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C938738425232CCF0091BDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C938738625232CCF0091BDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		C938738325232CCF0091BDDD /* RunningApp */ = {
 			isa = PBXGroup;
 			children = (
+				B58D770825A2354A00FB6E70 /* FormatDisplay.swift */,
 				C938738425232CCF0091BDDD /* AppDelegate.swift */,
 				C938738625232CCF0091BDDD /* SceneDelegate.swift */,
 				C938738825232CCF0091BDDD /* ViewController.swift */,
@@ -265,6 +268,7 @@
 				C938738925232CCF0091BDDD /* ViewController.swift in Sources */,
 				C938738525232CCF0091BDDD /* AppDelegate.swift in Sources */,
 				C938738725232CCF0091BDDD /* SceneDelegate.swift in Sources */,
+				B58D770925A2354A00FB6E70 /* FormatDisplay.swift in Sources */,
 				C9FB97CF25358C3D007B6603 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -93,6 +93,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="start_click:" destination="gHv-3i-mhz" eventType="touchUpInside" id="CGl-HA-eF7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gs-i3-EUC">
                                 <rect key="frame" x="284" y="748" width="119" height="37"/>
@@ -105,6 +108,9 @@
                                 <state key="normal" title="Resume">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="resume_click:" destination="gHv-3i-mhz" eventType="touchUpInside" id="amL-TL-vRA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-Bf-zb5">
                                 <rect key="frame" x="11" y="749" width="155" height="36"/>
@@ -116,6 +122,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="save_click:" destination="gHv-3i-mhz" eventType="touchUpInside" id="mDq-XG-ssz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pla-ey-D9b"/>
