@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         newRun.duration = Int16(seconds)
         newRun.endTime = Date()
         newRun.startTime = Date(milliseconds: (newRun.endTime!.millisecondsSince1970 - Int64(seconds)))
-        
+        print("in saveRun :\(locationList.count)")
         for location in locationList {
           let locationObject = Location(context: CoreDataStack.context)
           locationObject.timestamp = location.timestamp
@@ -162,6 +162,7 @@ extension ViewController: CLLocationManagerDelegate {
           }
           
           locationList.append(newLocation)
+          print("new Location:\(newLocation)")
         }
     }
   

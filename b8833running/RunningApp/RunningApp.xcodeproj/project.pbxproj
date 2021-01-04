@@ -44,6 +44,7 @@
 		B58D771725A3566A00FB6E70 /* MoonRunner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoonRunner.xcdatamodel; sourceTree = "<group>"; };
 		B58D771C25A356EA00FB6E70 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B58D772125A36F0600FB6E70 /* HistoryTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableVC.swift; sourceTree = "<group>"; };
+		B58D774D25A3AC1500FB6E70 /* Ashton campus walk v2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Ashton campus walk v2.gpx"; path = "../../../../spare_time/working/a8899_1200_swift/Ashton campus walk v2.gpx"; sourceTree = "<group>"; };
 		C938738125232CCF0091BDDD /* RunningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C938738425232CCF0091BDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C938738625232CCF0091BDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		C938737825232CCF0091BDDD = {
 			isa = PBXGroup;
 			children = (
+				B58D774D25A3AC1500FB6E70 /* Ashton campus walk v2.gpx */,
 				C938738325232CCF0091BDDD /* RunningApp */,
 				C938739A25232CD10091BDDD /* RunningAppTests */,
 				C93873A525232CD10091BDDD /* RunningAppUITests */,
