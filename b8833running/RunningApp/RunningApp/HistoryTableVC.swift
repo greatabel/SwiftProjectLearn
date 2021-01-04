@@ -1,8 +1,6 @@
 import UIKit
 import CoreData
 
-
-
 extension Int16 {
 
     func secondsToTime() -> String {
@@ -20,7 +18,7 @@ extension Int16 {
 
 class HistoryTableVC: UITableViewController {
     
-    let myArray = ["row 1", "row 2", "row 3", "row 4"]
+//    let myArray = ["row 1", "row 2", "row 3", "row 4"]
     var myruns: [NSManagedObject] = []
     let cellReuseIdentifier = "reuseIdentifier"
     override func viewDidLoad() {
@@ -76,7 +74,7 @@ class HistoryTableVC: UITableViewController {
 
         if myruns.count > 0 {
             let run = myruns[indexPath.row] as! Run
-            print(run,run.distance, run.duration, run.startTime)
+//            print(run,run.distance, run.duration, run.startTime)
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM-dd, yyyy"

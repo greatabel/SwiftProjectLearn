@@ -1,15 +1,6 @@
-//
-//  MapViewController.swift
-//  RunningApp
-//
-//  Created by estedu6 theodore on 13/10/2020.
-//  Copyright © 2020 estedu6 theodore. All rights reserved.
-//
-
 import UIKit
 import CoreLocation
 import MapKit
-
 
 
 class MapViewController: UIViewController {
