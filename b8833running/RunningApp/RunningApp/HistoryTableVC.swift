@@ -1,13 +1,33 @@
 import UIKit
+import CoreData
+
+
+
+extension Int16 {
+
+    func secondsToTime() -> String {
+
+        let (h,m,s) = (self / 3600, (self % 3600) / 60, (self % 3600) % 60)
+
+        let h_string = h < 10 ? "0\(h)" : "\(h)"
+        let m_string =  m < 10 ? "0\(m)" : "\(m)"
+        let s_string =  s < 10 ? "0\(s)" : "\(s)"
+
+        return "\(h_string):\(m_string):\(s_string)"
+    }
+}
+    
 
 class HistoryTableVC: UITableViewController {
     
     let myArray = ["row 1", "row 2", "row 3", "row 4"]
-    
+    var myruns: [NSManagedObject] = []
     let cellReuseIdentifier = "reuseIdentifier"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        myruns = CoreDataStack.loadData()
+        print(myruns.count)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,6 +47,12 @@ class HistoryTableVC: UITableViewController {
         tableView.dataSource = self
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+        myruns = CoreDataStack.loadData()
+        self.tableView.reloadData()
+    }
 
     @IBOutlet var mytableView: UITableView!
     // MARK: - Table view data source
@@ -38,8 +64,8 @@ class HistoryTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(myArray.count)
-        return myArray.count
+//        print(myArray.count)
+        return myruns.count
     }
 
     
@@ -48,15 +74,40 @@ class HistoryTableVC: UITableViewController {
 
         
 
-        if myArray.count > 0 {
-            cell.textLabel!.text = myArray[indexPath.row]
+        if myruns.count > 0 {
+            let run = myruns[indexPath.row] as! Run
+            print(run,run.distance, run.duration, run.startTime)
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd, yyyy"
+            let s = dateFormatter.string(from: run.startTime!)
+            
+            cell.textLabel!.text = s + ": Footing | " + run.duration.secondsToTime() + "\n"
+                + String(run.distance)
         }
-        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.numberOfLines = 2
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
 
+            let label = UILabel()
+            label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+            label.text = "Workout History"
+            label.font = UIFont(name:"HelveticaNeue-Bold", size: 32.0)
+//            label.font = UIFont().futuraPTMediumFont(16) // my custom font
+            label.textColor = UIColor.black // my custom colour
+
+            headerView.addSubview(label)
+
+            return headerView
+        }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 50
+        }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

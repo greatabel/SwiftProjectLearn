@@ -28,4 +28,28 @@ class CoreDataStack {
       fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
     }
   }
+    
+    
+  class func loadData() -> [NSManagedObject] {
+
+    var myruns: [NSManagedObject] = []
+    let managedContext =
+        CoreDataStack.context
+    
+    //2
+    let fetchRequest =
+      NSFetchRequest<NSManagedObject>(entityName: "Run")
+    
+    //3
+    do {
+        myruns = try managedContext.fetch(fetchRequest)
+        print(myruns)
+    } catch let error as NSError {
+      print("Could not fetch. \(error), \(error.userInfo)")
+    }
+    return myruns
 }
+    
+}
+
+

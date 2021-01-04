@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList: [CLLocation] = []
     
-    var myruns: [NSManagedObject] = []
+    
     
     @IBOutlet weak var startBtn: UIButton!
     
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resume_click(_ sender: Any) {
-        loadData()
+//        loadData()
     }
     private func startRun() {
         startBtn.isHidden = true
@@ -87,24 +87,7 @@ class ViewController: UIViewController {
         saveRun()
     }
     
-    private func loadData(){
-    
-        
-        let managedContext =
-            CoreDataStack.context
-        
-        //2
-        let fetchRequest =
-          NSFetchRequest<NSManagedObject>(entityName: "Run")
-        
-        //3
-        do {
-            myruns = try managedContext.fetch(fetchRequest)
-            print(myruns)
-        } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
