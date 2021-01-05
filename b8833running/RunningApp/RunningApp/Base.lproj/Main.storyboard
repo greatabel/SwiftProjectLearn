@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8OH-Zg-MQ2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8OH-Zg-MQ2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +44,10 @@
         <scene sceneID="K0u-Of-3iG">
             <objects>
                 <viewController id="gyf-P0-IBM" customClass="MapViewController" customModule="RunningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kT2-LB-beF"/>
+                        <viewControllerLayoutGuide type="bottom" id="6bN-uH-YJn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f9Z-Es-HqK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,14 +55,16 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6NG-Kn-usz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gyf-P0-IBM" id="GLq-NR-lDq"/>
+                                </connections>
                             </mapView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="lLq-sA-iuZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps" image="mappin.and.ellipse" catalog="system" id="vQ1-bb-fRh"/>
                     <connections>
-                        <outlet property="mapView" destination="6NG-Kn-usz" id="ZY2-9h-v80"/>
+                        <outlet property="mapView" destination="6NG-Kn-usz" id="fmx-tR-51P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2L-Tt-Q1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,6 +75,10 @@
         <scene sceneID="9kK-3s-1ZQ">
             <objects>
                 <viewController id="gHv-3i-mhz" customClass="ViewController" customModule="RunningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yrE-GF-RyY"/>
+                        <viewControllerLayoutGuide type="bottom" id="9jB-Yp-ZOr"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xsM-Vs-F4k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,18 +139,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Pla-ey-D9b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Pla-ey-D9b" firstAttribute="bottom" secondItem="FdU-Bf-zb5" secondAttribute="bottom" constant="28" id="4ru-Y1-d7v"/>
-                            <constraint firstItem="BIi-EB-Ilh" firstAttribute="top" secondItem="Pla-ey-D9b" secondAttribute="top" constant="83" id="4vY-ak-EUH"/>
+                            <constraint firstItem="9jB-Yp-ZOr" firstAttribute="top" secondItem="FdU-Bf-zb5" secondAttribute="bottom" constant="28" id="4ru-Y1-d7v"/>
+                            <constraint firstItem="BIi-EB-Ilh" firstAttribute="top" secondItem="yrE-GF-RyY" secondAttribute="bottom" constant="83" id="4vY-ak-EUH"/>
                             <constraint firstItem="FdU-Bf-zb5" firstAttribute="leading" secondItem="fQv-x2-xPK" secondAttribute="leading" id="AMp-cj-M0d"/>
-                            <constraint firstItem="Pla-ey-D9b" firstAttribute="trailing" secondItem="3gs-i3-EUC" secondAttribute="trailing" constant="11" id="JQb-Q1-JnS"/>
+                            <constraint firstAttribute="trailing" secondItem="3gs-i3-EUC" secondAttribute="trailing" constant="11" id="JQb-Q1-JnS"/>
                             <constraint firstItem="3gs-i3-EUC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FdU-Bf-zb5" secondAttribute="trailing" constant="8" symbolic="YES" id="SfR-xf-0wc"/>
-                            <constraint firstItem="Pla-ey-D9b" firstAttribute="trailing" secondItem="ndg-hD-Iek" secondAttribute="trailing" constant="20" id="WFl-D4-th4"/>
+                            <constraint firstAttribute="trailing" secondItem="ndg-hD-Iek" secondAttribute="trailing" constant="20" id="WFl-D4-th4"/>
                             <constraint firstItem="FdU-Bf-zb5" firstAttribute="bottom" secondItem="3gs-i3-EUC" secondAttribute="bottom" id="XRp-jW-ar1"/>
-                            <constraint firstItem="fQv-x2-xPK" firstAttribute="leading" secondItem="Pla-ey-D9b" secondAttribute="leading" constant="11" id="fR1-ha-fIx"/>
-                            <constraint firstItem="BIi-EB-Ilh" firstAttribute="leading" secondItem="Pla-ey-D9b" secondAttribute="leading" constant="11" id="lTc-PV-E35"/>
+                            <constraint firstItem="fQv-x2-xPK" firstAttribute="leading" secondItem="xsM-Vs-F4k" secondAttribute="leading" constant="11" id="fR1-ha-fIx"/>
+                            <constraint firstItem="BIi-EB-Ilh" firstAttribute="leading" secondItem="xsM-Vs-F4k" secondAttribute="leading" constant="11" id="lTc-PV-E35"/>
                             <constraint firstItem="3gs-i3-EUC" firstAttribute="top" secondItem="fQv-x2-xPK" secondAttribute="bottom" constant="21" id="phm-pb-1fF"/>
                             <constraint firstItem="ndg-hD-Iek" firstAttribute="top" secondItem="BIi-EB-Ilh" secondAttribute="bottom" constant="30" id="sCF-kC-vkm"/>
                             <constraint firstItem="BIi-EB-Ilh" firstAttribute="centerX" secondItem="xsM-Vs-F4k" secondAttribute="centerX" constant="-4.5" id="sZO-Bb-PBy"/>

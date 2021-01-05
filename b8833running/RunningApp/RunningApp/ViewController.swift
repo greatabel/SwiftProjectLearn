@@ -45,6 +45,13 @@ class ViewController: UIViewController {
     
     @IBAction func save_click(_ sender: Any) {
         saveRun()
+        
+        
+        startBtn.isHidden = false
+        saveBtn.isHidden = true
+        
+        
+        locationManager.stopUpdatingLocation()
     }
     
     @IBAction func resume_click(_ sender: Any) {
