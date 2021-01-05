@@ -2,13 +2,19 @@ import UIKit
 import MapKit
 
 //MapViewController
+
+/*
+ how to test without cityrun
+ https://juejin.cn/post/6844904180742619143
+ */
+
 class MulticolorPolyline: MKPolyline {
   var color = UIColor.black
 }
 
 class MapViewController: UIViewController {
   
-    @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var mapView: MKMapView!
    
   @IBOutlet weak var distanceLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
@@ -21,6 +27,31 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     configureView()
   }
+
+  override func viewDidAppear(_ animated: Bool) {
+    print("viewDidAppear in MapV")
+    configureView()
+    }
+/*
+pin Pins on the maps, use start , end lat-long cordinate use its position
+*/
+func placePins() {
+//    let coords = [CLLocationCoordinate2D(latitude: 40.689249, longitude: -74.044500), CLLocationCoordinate2D(latitude: 40.781174, longitude: -73.966660), CLLocationCoordinate2D(latitude: 40.748817, longitude: -73.985428), CLLocationCoordinate2D(latitude: 40.706175, longitude: -73.996918)]
+    let locations = run.locations?.array as! [Location]
+    let start = CLLocationCoordinate2D(latitude: locations[0].latitude,
+                                       longitude: locations[0].longitude)
+    let end = CLLocationCoordinate2D(latitude: locations[locations.count-1].latitude,
+                                       longitude: locations[locations.count-1].longitude)
+    let coords = [start, end]
+    
+    let titles = ["Start", "Finish"]
+    for i in coords.indices {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coords[i]
+        annotation.title = titles[i]
+        mapView.addAnnotation(annotation)
+    }
+}
   
   private func configureView() {
 //    let distance = Measurement(value: run.distance, unit: UnitLength.meters)
@@ -38,6 +69,7 @@ class MapViewController: UIViewController {
 //    paceLabel.text = "Pace:  \(formattedPace)"
     
     loadMap()
+    placePins()
   }
   
   private func mapRegion() -> MKCoordinateRegion? {
@@ -98,19 +130,13 @@ class MapViewController: UIViewController {
       minSpeed = min(minSpeed, speed)
       maxSpeed = max(maxSpeed, speed)
     }
-    
-    //4
-    let midSpeed = speeds.reduce(0, +) / Double(speeds.count)
-    
-    //5
+
     var segments: [MulticolorPolyline] = []
-    for ((start, end), speed) in zip(coordinates, speeds) {
+    for (start, end)in coordinates {
       let coords = [start.coordinate, end.coordinate]
       let segment = MulticolorPolyline(coordinates: coords, count: 2)
-      segment.color = segmentColor(speed: speed,
-                                   midSpeed: midSpeed,
-                                   slowestSpeed: minSpeed,
-                                   fastestSpeed: maxSpeed)
+
+      segment.color = UIColor.red
       segments.append(segment)
     }
     return segments
