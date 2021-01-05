@@ -36,21 +36,28 @@ class MapViewController: UIViewController {
 pin Pins on the maps, use start , end lat-long cordinate use its position
 */
 func placePins() {
-//    let coords = [CLLocationCoordinate2D(latitude: 40.689249, longitude: -74.044500), CLLocationCoordinate2D(latitude: 40.781174, longitude: -73.966660), CLLocationCoordinate2D(latitude: 40.748817, longitude: -73.985428), CLLocationCoordinate2D(latitude: 40.706175, longitude: -73.996918)]
-    let locations = run.locations?.array as! [Location]
-    let start = CLLocationCoordinate2D(latitude: locations[0].latitude,
-                                       longitude: locations[0].longitude)
-    let end = CLLocationCoordinate2D(latitude: locations[locations.count-1].latitude,
-                                       longitude: locations[locations.count-1].longitude)
-    let coords = [start, end]
-    
-    let titles = ["Start", "Finish"]
-    for i in coords.indices {
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coords[i]
-        annotation.title = titles[i]
-        mapView.addAnnotation(annotation)
+    for annotation in mapView.annotations{
+        mapView.removeAnnotation(annotation)
     }
+    var  myruns = CoreDataStack.loadData()
+    if (myruns.count > 0 && run.locations!.count > 0) {
+        //    let coords = [CLLocationCoordinate2D(latitude: 40.689249, longitude: -74.044500), CLLocationCoordinate2D(latitude: 40.781174, longitude: -73.966660), CLLocationCoordinate2D(latitude: 40.748817, longitude: -73.985428), CLLocationCoordinate2D(latitude: 40.706175, longitude: -73.996918)]
+            let locations = run.locations?.array as! [Location]
+            let start = CLLocationCoordinate2D(latitude: locations[0].latitude,
+                                               longitude: locations[0].longitude)
+            let end = CLLocationCoordinate2D(latitude: locations[locations.count-1].latitude,
+                                               longitude: locations[locations.count-1].longitude)
+            let coords = [start, end]
+            
+            let titles = ["Start", "Finish"]
+            for i in coords.indices {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coords[i]
+                annotation.title = titles[i]
+                mapView.addAnnotation(annotation)
+            }
+    }
+
 }
   
   private func configureView() {
@@ -146,23 +153,25 @@ func placePins() {
     var  myruns = CoreDataStack.loadData()
     if myruns.count > 0 {
         run = myruns[myruns.count-1] as! Run
+        
+        guard
+          let locations = run.locations,
+          locations.count > 0,
+          let region = mapRegion()
+        else {
+            let alert = UIAlertController(title: "Error",
+                                          message: "Sorry, this run has no locations saved",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(alert, animated: true)
+            return
+        }
+        
+        mapView.setRegion(region, animated: true)
+        mapView.addOverlays(polyLine())
     }
     
-    guard
-      let locations = run.locations,
-      locations.count > 0,
-      let region = mapRegion()
-    else {
-        let alert = UIAlertController(title: "Error",
-                                      message: "Sorry, this run has no locations saved",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        present(alert, animated: true)
-        return
-    }
-    
-    mapView.setRegion(region, animated: true)
-    mapView.addOverlays(polyLine())
+
   }
   
   private func segmentColor(speed: Double, midSpeed: Double, slowestSpeed: Double, fastestSpeed: Double) -> UIColor {

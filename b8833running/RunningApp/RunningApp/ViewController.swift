@@ -49,13 +49,22 @@ class ViewController: UIViewController {
         
         startBtn.isHidden = false
         saveBtn.isHidden = true
-        
+        resumeBtn.isHidden = true
         
         locationManager.stopUpdatingLocation()
     }
     
     @IBAction func resume_click(_ sender: Any) {
 //        loadData()
+        seconds = 0
+        distance = Measurement(value: 0, unit: UnitLength.meters)
+        updateDisplay()
+        timer?.invalidate()
+        timer = nil
+        startBtn.isHidden = false
+        resumeBtn.isHidden = true
+        saveBtn.isHidden = true
+        locationManager.stopUpdatingLocation()
     }
     
     private func startLocationUpdates() {
@@ -103,7 +112,11 @@ class ViewController: UIViewController {
         saveRun()
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      timer?.invalidate()
+      locationManager.stopUpdatingLocation()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

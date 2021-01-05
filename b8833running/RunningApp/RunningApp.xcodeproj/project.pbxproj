@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56183F725A4478F0014EE15 /* myplist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56183F625A4478F0014EE15 /* myplist.plist */; };
 		B58D770925A2354A00FB6E70 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D770825A2354A00FB6E70 /* FormatDisplay.swift */; };
 		B58D771825A3566A00FB6E70 /* Running.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B58D771625A3566A00FB6E70 /* Running.xcdatamodeld */; };
 		B58D771D25A356EA00FB6E70 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D771C25A356EA00FB6E70 /* CoreDataStack.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B56183F625A4478F0014EE15 /* myplist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = myplist.plist; sourceTree = "<group>"; };
 		B58D770825A2354A00FB6E70 /* FormatDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
 		B58D771725A3566A00FB6E70 /* MoonRunner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoonRunner.xcdatamodel; sourceTree = "<group>"; };
 		B58D771C25A356EA00FB6E70 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56183F525A447640014EE15 /* supported_files */ = {
+			isa = PBXGroup;
+			children = (
+				B56183F625A4478F0014EE15 /* myplist.plist */,
+			);
+			path = supported_files;
+			sourceTree = "<group>";
+		};
 		C938737825232CCF0091BDDD = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		C938738325232CCF0091BDDD /* RunningApp */ = {
 			isa = PBXGroup;
 			children = (
+				B56183F525A447640014EE15 /* supported_files */,
 				B58D771C25A356EA00FB6E70 /* CoreDataStack.swift */,
 				B58D771625A3566A00FB6E70 /* Running.xcdatamodeld */,
 				B58D770825A2354A00FB6E70 /* FormatDisplay.swift */,
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C938739125232CD10091BDDD /* LaunchScreen.storyboard in Resources */,
+				B56183F725A4478F0014EE15 /* myplist.plist in Resources */,
 				C938738E25232CD10091BDDD /* Assets.xcassets in Resources */,
 				C938738C25232CCF0091BDDD /* Main.storyboard in Resources */,
 			);

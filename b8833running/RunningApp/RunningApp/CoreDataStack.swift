@@ -1,5 +1,27 @@
 import CoreData
 
+struct APIPreferences: Codable {
+  var apiKey: String
+  var baseURL: String
+}
+
+class APIPreferencesLoader {
+  static private var plistURL: URL {
+    let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    return documents.appendingPathComponent("myplist.plist")
+  }
+
+  static func load() -> APIPreferences {
+    let decoder = PropertyListDecoder()
+
+    guard let data = try? Data.init(contentsOf: plistURL),
+      let preferences = try? decoder.decode(APIPreferences.self, from: data)
+      else { return APIPreferences(apiKey: "", baseURL: "") }
+
+    return preferences
+  }
+}
+
 class CoreDataStack {
   
   static let persistentContainer: NSPersistentContainer = {
