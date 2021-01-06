@@ -11,11 +11,20 @@
 		B5C9FE8D25A56EF900E717B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FE8C25A56EF900E717B4 /* SceneDelegate.swift */; };
 		B5C9FE8F25A56EF900E717B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FE8E25A56EF900E717B4 /* ViewController.swift */; };
 		B5C9FE9225A56EF900E717B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C9FE9025A56EF900E717B4 /* Main.storyboard */; };
-		B5C9FE9525A56EF900E717B4 /* campus_museum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FE9325A56EF900E717B4 /* campus_museum.xcdatamodeld */; };
 		B5C9FE9725A56EFE00E717B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */; };
 		B5C9FE9A25A56EFE00E717B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C9FE9825A56EFE00E717B4 /* LaunchScreen.storyboard */; };
 		B5C9FEA525A56EFE00E717B4 /* campus_museumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEA425A56EFE00E717B4 /* campus_museumTests.swift */; };
 		B5C9FEB025A56EFE00E717B4 /* campus_museumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEAF25A56EFE00E717B4 /* campus_museumUITests.swift */; };
+		B5C9FEC225A59C5900E717B4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */; };
+		B5C9FEC825A59D2900E717B4 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEC725A59D2900E717B4 /* LoadData.swift */; };
+		B5C9FEE025A59EA900E717B4 /* campus_museum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */; };
+		B5C9FEE925A59EFA00E717B4 /* Artworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */; };
+		B5C9FEEA25A59EFA00E717B4 /* LastAccessDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */; };
+		B5C9FEEB25A59EFA00E717B4 /* LastAccessDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE725A59EF900E717B4 /* LastAccessDate+CoreDataProperties.swift */; };
+		B5C9FEEC25A59EFA00E717B4 /* Artworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE825A59EF900E717B4 /* Artworks+CoreDataClass.swift */; };
+		B5C9FEF425A5A3A500E717B4 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEF325A5A3A500E717B4 /* detailViewController.swift */; };
+		B5C9FEF925A5A40900E717B4 /* viewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEF825A5A40900E717B4 /* viewControllerTableViewCell.swift */; };
+		B5C9FEFF25A5A45C00E717B4 /* Ashton campus walk v2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B5C9FEFE25A5A45C00E717B4 /* Ashton campus walk v2.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +50,6 @@
 		B5C9FE8C25A56EF900E717B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5C9FE8E25A56EF900E717B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5C9FE9125A56EF900E717B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B5C9FE9425A56EF900E717B4 /* campus_museum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = campus_museum.xcdatamodel; sourceTree = "<group>"; };
 		B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C9FE9925A56EFE00E717B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C9FE9B25A56EFE00E717B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,16 @@
 		B5C9FEAB25A56EFE00E717B4 /* campus_museumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = campus_museumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C9FEAF25A56EFE00E717B4 /* campus_museumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = campus_museumUITests.swift; sourceTree = "<group>"; };
 		B5C9FEB125A56EFE00E717B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		B5C9FEC725A59D2900E717B4 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		B5C9FEDF25A59EA900E717B4 /* COMP327_Assignment2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = COMP327_Assignment2.xcdatamodel; sourceTree = "<group>"; };
+		B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LastAccessDate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B5C9FEE725A59EF900E717B4 /* LastAccessDate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LastAccessDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B5C9FEE825A59EF900E717B4 /* Artworks+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artworks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B5C9FEF325A5A3A500E717B4 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		B5C9FEF825A5A40900E717B4 /* viewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		B5C9FEFE25A5A45C00E717B4 /* Ashton campus walk v2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Ashton campus walk v2.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +119,15 @@
 		B5C9FE8925A56EF900E717B4 /* campus_museum */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9FEFD25A5A44900E717B4 /* supported_files */,
+				B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */,
+				B5C9FEE425A59EDD00E717B4 /* Model */,
+				B5C9FEC625A59CE000E717B4 /* Controller */,
+				B5C9FEC025A59B4400E717B4 /* View */,
 				B5C9FE8A25A56EF900E717B4 /* AppDelegate.swift */,
 				B5C9FE8C25A56EF900E717B4 /* SceneDelegate.swift */,
-				B5C9FE8E25A56EF900E717B4 /* ViewController.swift */,
-				B5C9FE9025A56EF900E717B4 /* Main.storyboard */,
-				B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */,
-				B5C9FE9825A56EFE00E717B4 /* LaunchScreen.storyboard */,
+				B5C9FEC725A59D2900E717B4 /* LoadData.swift */,
 				B5C9FE9B25A56EFE00E717B4 /* Info.plist */,
-				B5C9FE9325A56EF900E717B4 /* campus_museum.xcdatamodeld */,
 			);
 			path = campus_museum;
 			sourceTree = "<group>";
@@ -129,6 +148,46 @@
 				B5C9FEB125A56EFE00E717B4 /* Info.plist */,
 			);
 			path = campus_museumUITests;
+			sourceTree = "<group>";
+		};
+		B5C9FEC025A59B4400E717B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5C9FE9025A56EF900E717B4 /* Main.storyboard */,
+				B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */,
+				B5C9FE9825A56EFE00E717B4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5C9FEC625A59CE000E717B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5C9FEF825A5A40900E717B4 /* viewControllerTableViewCell.swift */,
+				B5C9FE8E25A56EF900E717B4 /* ViewController.swift */,
+				B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */,
+				B5C9FEF325A5A3A500E717B4 /* detailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5C9FEE425A59EDD00E717B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5C9FEE825A59EF900E717B4 /* Artworks+CoreDataClass.swift */,
+				B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */,
+				B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */,
+				B5C9FEE725A59EF900E717B4 /* LastAccessDate+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5C9FEFD25A5A44900E717B4 /* supported_files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C9FEFE25A5A45C00E717B4 /* Ashton campus walk v2.gpx */,
+			);
+			path = supported_files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +296,7 @@
 				B5C9FE9A25A56EFE00E717B4 /* LaunchScreen.storyboard in Resources */,
 				B5C9FE9725A56EFE00E717B4 /* Assets.xcassets in Resources */,
 				B5C9FE9225A56EF900E717B4 /* Main.storyboard in Resources */,
+				B5C9FEFF25A5A45C00E717B4 /* Ashton campus walk v2.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +322,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C9FE8F25A56EF900E717B4 /* ViewController.swift in Sources */,
+				B5C9FEEB25A59EFA00E717B4 /* LastAccessDate+CoreDataProperties.swift in Sources */,
+				B5C9FEF925A5A40900E717B4 /* viewControllerTableViewCell.swift in Sources */,
+				B5C9FEEA25A59EFA00E717B4 /* LastAccessDate+CoreDataClass.swift in Sources */,
+				B5C9FEF425A5A3A500E717B4 /* detailViewController.swift in Sources */,
+				B5C9FEC225A59C5900E717B4 /* WelcomeVC.swift in Sources */,
+				B5C9FEEC25A59EFA00E717B4 /* Artworks+CoreDataClass.swift in Sources */,
+				B5C9FEE925A59EFA00E717B4 /* Artworks+CoreDataProperties.swift in Sources */,
 				B5C9FE8B25A56EF900E717B4 /* AppDelegate.swift in Sources */,
-				B5C9FE9525A56EF900E717B4 /* campus_museum.xcdatamodeld in Sources */,
 				B5C9FE8D25A56EF900E717B4 /* SceneDelegate.swift in Sources */,
+				B5C9FEE025A59EA900E717B4 /* campus_museum.xcdatamodeld in Sources */,
+				B5C9FEC825A59D2900E717B4 /* LoadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,12 +667,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B5C9FE9325A56EF900E717B4 /* campus_museum.xcdatamodeld */ = {
+		B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B5C9FE9425A56EF900E717B4 /* campus_museum.xcdatamodel */,
+				B5C9FEDF25A59EA900E717B4 /* COMP327_Assignment2.xcdatamodel */,
 			);
-			currentVersion = B5C9FE9425A56EF900E717B4 /* campus_museum.xcdatamodel */;
+			currentVersion = B5C9FEDF25A59EA900E717B4 /* COMP327_Assignment2.xcdatamodel */;
 			path = campus_museum.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
