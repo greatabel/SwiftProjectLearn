@@ -1,10 +1,3 @@
-//
-//  campus_museumUITests.swift
-//  campus_museumUITests
-//
-//  Created by abel on 2021/1/6.
-//
-
 import XCTest
 
 class campus_museumUITests: XCTestCase {

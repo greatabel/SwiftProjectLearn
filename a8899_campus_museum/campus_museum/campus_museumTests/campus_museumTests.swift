@@ -1,10 +1,3 @@
-//
-//  campus_museumTests.swift
-//  campus_museumTests
-//
-//  Created by abel on 2021/1/6.
-//
-
 import XCTest
 @testable import campus_museum
 
