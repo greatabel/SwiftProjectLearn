@@ -175,7 +175,7 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                 annotation.subtitle = object.location
                 mapView.addAnnotation(annotation)
             }
-            print("adding in anotation finished 😄")
+            print("adding in anotation finished")
             self.table.reloadData()
         }
     }
@@ -196,6 +196,8 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         // Configure the cell... enable attribute should be ckecked here
         if (buildingGroup.count > 0){
             let artInstance = buildingGroup[indexPath.section].artWorksInSide[indexPath.row]
+            
+            // https://stackoverflow.com/questions/58951570/how-to-add-two-different-font-size-to-textview-text-in-swift
             
             let heading = "\(artInstance.title!)\n\n"
             let content = "\(artInstance.artist!) \n"
