@@ -197,14 +197,23 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         if (buildingGroup.count > 0){
             let artInstance = buildingGroup[indexPath.section].artWorksInSide[indexPath.row]
             
-            let text = """
-            Title: \(artInstance.title!) \n
-            Artist: \(artInstance.artist!) \n
-            """
+            let heading = "\(artInstance.title!)\n\n"
+            let content = "\(artInstance.artist!) \n"
+
+            let attributedText = NSMutableAttributedString(string: heading, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16.0)])
+
+            attributedText.append(NSAttributedString(string: content, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.black]))
+
+            cell.myTextView.attributedText = attributedText
+            
+//            let text = """
+//            Title: \(artInstance.title!) \n
+//            Artist: \(artInstance.artist!) \n
+//            """
             let data = artInstance.imageData
             let img = UIImage(data:data! as Data)
             
-            cell.myTextView.text = text
+//            cell.myTextView.text = text
             cell.myImage.image = img
             
             //cell.textLabel?.text = artInstance.location
