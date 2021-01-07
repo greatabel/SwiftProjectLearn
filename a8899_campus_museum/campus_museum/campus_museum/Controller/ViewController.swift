@@ -180,9 +180,9 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         }
     }
     
-    //__________________________________________________________________________
-    //                           table view part
-    //__________________________________________________________________________
+    //**************************************************************************
+    //                           table view place/artwork list part
+    //**************************************************************************
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //And also the cellForRowAt method, to return the data from the name bit
@@ -228,8 +228,8 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         
         let headerLabel = UILabel(frame: CGRect(x: 15, y: 0, width:
             tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont(name: "System", size: 15)
-        headerLabel.textColor = UIColor.white
+        headerLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        headerLabel.textColor = UIColor.black
         headerLabel.text = buildingGroup[section].buildingName
         headerLabel.sizeToFit()
         headerView.addSubview(headerLabel)
