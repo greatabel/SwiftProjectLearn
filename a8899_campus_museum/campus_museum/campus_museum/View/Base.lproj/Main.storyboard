@@ -62,14 +62,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-n5-IqO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University Of Liverpool Artwork Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-hS-Imh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-gq-bE9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="286.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="20.333333333333343" width="414" height="286.33333333333326"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="bJ5-DO-kfG"/>
                                         </connections>
                                     </mapView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TcI-cJ-6uD">
-                                        <rect key="frame" x="0.0" y="286.33333333333326" width="414" height="429.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="306.66666666666674" width="414" height="409.33333333333326"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="129" id="7Zf-Gy-FSR" customClass="viewControllerTableViewCell" customModule="campus_museum" customModuleProvider="target">
