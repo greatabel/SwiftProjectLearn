@@ -190,6 +190,9 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         let cell =
             tableView.dequeueReusableCell(withIdentifier: "Cell",
                                           for: indexPath) as! viewControllerTableViewCell
+        // add > to right
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        
         // Configure the cell... enable attribute should be ckecked here
         if (buildingGroup.count > 0){
             let artInstance = buildingGroup[indexPath.section].artWorksInSide[indexPath.row]
@@ -296,7 +299,8 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                             imageView.image = UIImage(data:data! as Data)
                             imageView.contentMode = .scaleAspectFit
                             annotationView!.leftCalloutAccessoryView = imageView
-                            
+//
+//                            print("annotationView width: \(annotationView!.frame.width) \(annotationView!.frame.height)")
                         }
                     }
                 }
