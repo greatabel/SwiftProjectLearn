@@ -86,6 +86,12 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.edgesForExtendedLayout = []
+//    }
+    
+    
     override func viewDidAppear(_ animated: Bool){
         //remove all the elements in the tapped art when view is loaded
         tappedArt.removeAll()
@@ -259,12 +265,15 @@ MKMapViewDelegate,CLLocationManagerDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell number: \(indexPath.row)!")
         //add the cooresponding item in the array
+        tappedArt.removeAll()
         tappedArt.append(buildingGroup[indexPath.section].artWorksInSide[indexPath.row])
         let loginVC =
             UIStoryboard(name: "Main",
                          bundle: nil).instantiateViewController(
                             withIdentifier: "detailViewController") as! detailViewController
-        self.present(loginVC, animated: true, completion: nil)
+//        self.present(loginVC, animated: true, completion: nil)
+        performSegue(withIdentifier: "show_detail", sender: self)
+//        self.navigationController?.pushViewController(loginVC, animated: true)
         
     }
     //__________________________________________________________________________
@@ -338,6 +347,7 @@ MKMapViewDelegate,CLLocationManagerDelegate{
             for item in searchResult{
                 if item.location ==
                     (view.annotation?.subtitle)! {
+                    tappedArt.removeAll()
                     tappedArt.append(item)
                 }
             }

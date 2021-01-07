@@ -62,7 +62,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-n5-IqO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University Of Liverpool Artwork Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-hS-Imh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="University Of Liverpool Artwork Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-hS-Imh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -139,12 +139,11 @@
                                 </variation>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
-                            <constraint firstItem="xLB-n5-IqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BCS-WE-epY"/>
-                            <constraint firstItem="xLB-n5-IqO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QEl-Ml-ahO"/>
+                            <constraint firstItem="xLB-n5-IqO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BCS-WE-epY"/>
+                            <constraint firstItem="xLB-n5-IqO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QEl-Ml-ahO"/>
                             <constraint firstAttribute="bottom" secondItem="xLB-n5-IqO" secondAttribute="bottom" id="beP-Xz-3ve"/>
-                            <constraint firstItem="xLB-n5-IqO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nfg-6u-POe"/>
+                            <constraint firstItem="xLB-n5-IqO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="nfg-6u-POe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -183,6 +182,7 @@
                     <connections>
                         <outlet property="mapView" destination="vWO-gq-bE9" id="BjX-Xi-W9S"/>
                         <outlet property="table" destination="TcI-cJ-6uD" id="d0p-Rf-r00"/>
+                        <segue destination="Pru-of-Owe" kind="showDetail" identifier="show_detail" id="alT-zz-wjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,18 +194,39 @@
             <objects>
                 <viewController storyboardIdentifier="detailViewController" id="Pru-of-Owe" customClass="detailViewController" customModule="campus_museum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PtK-Nh-TdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-2X-FNw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-44-8pg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vf-OA-N6a">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <navigationItem title="test" id="IqU-ss-Ud0">
+                                                <barButtonItem key="leftBarButtonItem" title="&lt;" id="2vA-Xx-khy">
+                                                    <connections>
+                                                        <action selector="goBack:" destination="Pru-of-Owe" id="Qkl-fd-3dd"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" enabled="NO" title="XXX" id="Thf-G4-PiS"/>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-44-8pg">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="660"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ch8-eZ-HNa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="585" id="yHd-Xz-sz1" userLabel="myCell">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="585"/>
+                                                <rect key="frame" x="0.0" y="66" width="414" height="585"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yHd-Xz-sz1" id="H30-Hu-CWd">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="585"/>
@@ -249,23 +270,9 @@
                                             <outlet property="delegate" destination="Pru-of-Owe" id="oC4-Zz-xsn"/>
                                         </connections>
                                     </tableView>
-                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vf-OA-N6a">
-                                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                        <items>
-                                            <navigationItem id="IqU-ss-Ud0">
-                                                <barButtonItem key="leftBarButtonItem" systemItem="done" id="2vA-Xx-khy">
-                                                    <connections>
-                                                        <action selector="goBack:" destination="Pru-of-Owe" id="Qkl-fd-3dd"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                                <barButtonItem key="rightBarButtonItem" enabled="NO" title="XXX" id="Thf-G4-PiS"/>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9vf-OA-N6a" firstAttribute="leading" secondItem="dUr-2X-FNw" secondAttribute="leading" id="5ua-df-nxs"/>
-                                    <constraint firstAttribute="bottom" secondItem="9vf-OA-N6a" secondAttribute="bottom" id="PCV-ac-pWn"/>
                                     <constraint firstAttribute="trailing" secondItem="9vf-OA-N6a" secondAttribute="trailing" id="wWm-IV-3aW"/>
                                 </constraints>
                             </stackView>

@@ -1,82 +1,69 @@
 import UIKit
 
-class detailViewController: UITableViewController {
-
+//this view shows the detail of the artwork
+class detailViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
+    //tables and bar button
+    @IBOutlet weak var buildTitle: UIBarButtonItem!
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //set the title for the bar at the buttom
+        buildTitle.title = tappedArt[0].location
+        //set the width of the bar maximum
+        buildTitle.width = 100
+        table.reloadData()
+        // Do any additional setup after loading the view.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    
+    
+    //return the cell number depends on the number of artwork been selected
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return places.count
+        return tappedArt.count
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+    
+    //return the cell based on the indexPath
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //And also the cellForRowAt method, to return the data from the name bit
+        //of the dictionary entry for this place (if it isn’t somehow nil).
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
+            as UITableViewCell
         // Configure the cell...
-
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        let textView = cell.viewWithTag(2) as! UITextView
+        
+        let artInstance = tappedArt[indexPath.row]
+        let data = artInstance.imageData
+        let img = UIImage(data:data! as Data)
+        
+        //set the image and inofrmation thatn
+        imageView.image = img
+        textView.text = """
+        ID: \(artInstance.id)
+        Title: \(artInstance.title ?? "Non")
+        Artist: \(artInstance.artist ?? "Non")
+        Year: \(artInstance.yearOfWork ?? "Non")
+        Information: \(artInstance.information ?? "Non")
+        locationNotes: \(artInstance.locationNotes ?? "Non")
+        lastModified: \(artInstance.lastModified ?? "Non")
+        """
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    //go back function for dismissing current view
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil);
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
