@@ -62,8 +62,8 @@ class WelcomeVC: UIViewController {
         var intFlag = false
         
         if Reachability.isConnectedToNetwork(){
-            presentInternetAlert(title: "Ready to use",
-                                 message: "Internet available ")
+            presentInternetAlert(title: "Welcome to use",
+                                 message: "Network available to async data")
            //set the internet flag equals to true
             intFlag = true
         }else{

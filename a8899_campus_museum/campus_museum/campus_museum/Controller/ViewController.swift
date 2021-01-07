@@ -272,7 +272,10 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                                        reuseIdentifier: annotationIdentifier)
             annotationView?.canShowCallout = true
             //put the rightCalloutAccessoryView as a information dot
-            annotationView?.rightCalloutAccessoryView = UIButton(type: .infoLight)
+            let myButton = UIButton(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+            myButton.backgroundColor = UIColor.gray
+            myButton.setTitle(">", for: .normal)
+            annotationView?.rightCalloutAccessoryView = myButton
             
             //put the image in the leftCalloutAccessory
             if (searchResult.isEmpty == false){
@@ -298,9 +301,9 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                     }
                 }
             }
-            //new feature from WWDC 2017
-            annotationView?.glyphText = "😎"
-            annotationView?.markerTintColor = UIColor.black
+            
+//            annotationView?.glyphText = "🖼"
+//            annotationView?.markerTintColor = UIColor.black
             
         }else {
             annotationView?.annotation = annotation
