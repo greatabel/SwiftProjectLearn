@@ -4,15 +4,31 @@ import UIKit
 class detailViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     //tables and bar button
-    @IBOutlet weak var buildTitle: UIBarButtonItem!
+//    @IBOutlet weak var buildTitle: UIBarButtonItem!
+  
+    @IBOutlet weak var navigation: UINavigationItem!
+    @IBOutlet weak var ByLbl: UILabel!
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var backButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigation.title = tappedArt[0].location
+        ByLbl.text = "By " + tappedArt[0].artist!
+//        navigationItem.title = "Title"
+//        let buildTitle = UIBarButtonItem()
+
         //set the title for the bar at the buttom
-        buildTitle.title = tappedArt[0].location
-        //set the width of the bar maximum
-        buildTitle.width = 100
+//        buildTitle.title = tappedArt[0].location
+//        //set the width of the bar maximum
+//        buildTitle.width = -5
+//        buildTitle.tintColor = UIColor.black
+//        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+//         negativeSpacer.width = 350
+//
+//         self.navigationItem.rightBarButtonItems = [negativeSpacer,buildTitle]
+        
         table.reloadData()
         // Do any additional setup after loading the view.
     }
@@ -43,15 +59,43 @@ class detailViewController: UIViewController, UITableViewDelegate,UITableViewDat
         
         //set the image and inofrmation thatn
         imageView.image = img
-        textView.text = """
-        ID: \(artInstance.id)
-        Title: \(artInstance.title ?? "Non")
-        Artist: \(artInstance.artist ?? "Non")
-        Year: \(artInstance.yearOfWork ?? "Non")
-        Information: \(artInstance.information ?? "Non")
-        locationNotes: \(artInstance.locationNotes ?? "Non")
-        lastModified: \(artInstance.lastModified ?? "Non")
+        let heading = """
+        \(artInstance.title ?? "Non")
         """
+        
+        let made_year = """
+        
+        Maded in: \(artInstance.yearOfWork ?? "Non")
+        \n
+        """
+        let content = """
+        \(artInstance.information ?? "Non")
+        ID: \(artInstance.id)
+        locationNotes: \(artInstance.locationNotes ?? "Non")
+        last update time: \(artInstance.lastModified ?? "Non")
+        """
+
+        let attributedText = NSMutableAttributedString(string: heading, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
+
+        attributedText.append(NSAttributedString(string: made_year, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+
+        
+        attributedText.append(NSAttributedString(string: content, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.black]))
+
+        textView.attributedText = attributedText
+
+//        textView.text = """
+//
+//        \(artInstance.title ?? "Non")
+//        \n
+//        Maded in: \(artInstance.yearOfWork ?? "Non")
+//        \n
+//        \(artInstance.information ?? "Non")
+//        \n
+//        ID: \(artInstance.id)
+//        locationNotes: \(artInstance.locationNotes ?? "Non")
+//        last update time: \(artInstance.lastModified ?? "Non")
+//        """
         
         return cell
     }

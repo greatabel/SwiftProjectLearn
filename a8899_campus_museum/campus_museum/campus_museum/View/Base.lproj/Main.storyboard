@@ -211,7 +211,6 @@
                                                         <action selector="goBack:" destination="Pru-of-Owe" id="Qkl-fd-3dd"/>
                                                     </connections>
                                                 </barButtonItem>
-                                                <barButtonItem key="rightBarButtonItem" enabled="NO" title="XXX" id="Thf-G4-PiS"/>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
@@ -289,8 +288,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4ji-hM-YEQ"/>
                     <connections>
+                        <outlet property="ByLbl" destination="Ch8-eZ-HNa" id="sQA-mu-uYK"/>
                         <outlet property="backButton" destination="2vA-Xx-khy" id="c91-XX-iIW"/>
-                        <outlet property="buildTitle" destination="Thf-G4-PiS" id="qfG-Hg-xpE"/>
+                        <outlet property="navigation" destination="IqU-ss-Ud0" id="ij5-gC-Hq3"/>
                         <outlet property="table" destination="2dC-44-8pg" id="T6z-wm-TeP"/>
                     </connections>
                 </viewController>
