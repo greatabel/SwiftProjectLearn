@@ -139,6 +139,7 @@
                                 </variation>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8de-ZE-kMl"/>
                         <constraints>
                             <constraint firstItem="xLB-n5-IqO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BCS-WE-epY"/>
                             <constraint firstItem="xLB-n5-IqO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QEl-Ml-ahO"/>
