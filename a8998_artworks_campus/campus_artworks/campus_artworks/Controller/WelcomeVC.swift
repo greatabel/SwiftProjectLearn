@@ -53,6 +53,18 @@ class WelcomeVC: UIViewController {
         
     }
 
+    @IBAction func enter_action(_ sender: Any) {
+        // enter main-vc
+        // https://stackoverflow.com/questions/62571146/how-to-hide-top-space-showing-previous-viewcontroller-hierarchy-on-xcode-ios-swi
+        
+        let mainVC =
+            UIStoryboard(name: "Main",
+                         bundle: nil).instantiateViewController(
+                            withIdentifier: "mainVC") as! ViewController
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true, completion: nil)
+    }
+    @IBOutlet weak var enterBtn: UIButton!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         //Dispose of any resources that can be recreated.

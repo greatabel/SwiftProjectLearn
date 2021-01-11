@@ -48,13 +48,16 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         
        
     }
-    
+    override var prefersStatusBarHidden:Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.toolbar.isHidden = true
-        view.insetsLayoutMarginsFromSafeArea = false
+//        
+//        self.navigationController?.toolbar.isHidden = true
+//        view.insetsLayoutMarginsFromSafeArea = false
+ 
         
         loadBuildingInSection();
         //reset the cell height

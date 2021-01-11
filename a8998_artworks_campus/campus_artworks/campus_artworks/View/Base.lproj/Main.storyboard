@@ -31,7 +31,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <state key="normal" title="Take a tour!"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="1BW-qx-qxx"/>
+                                            <action selector="enter_action:" destination="irF-id-ovO" eventType="touchUpInside" id="WqW-iQ-dGK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -46,6 +46,9 @@
                             <constraint firstAttribute="trailing" secondItem="3lu-Ie-mEe" secondAttribute="trailing" id="oHJ-cR-g8f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterBtn" destination="lOP-YB-S8C" id="qk1-yX-GKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58u-68-L8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,29 +57,32 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="campus_artworks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="campus_artworks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-n5-IqO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="University Of Liverpool Artwork Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-hS-Imh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ebp-bB-reu"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-gq-bE9">
-                                        <rect key="frame" x="0.0" y="20.333333333333343" width="414" height="286.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="80" width="414" height="294.33333333333331"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="bJ5-DO-kfG"/>
                                         </connections>
                                     </mapView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TcI-cJ-6uD">
-                                        <rect key="frame" x="0.0" y="306.66666666666674" width="414" height="409.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="374.33333333333326" width="414" height="361.66666666666674"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="129" id="7Zf-Gy-FSR" customClass="viewControllerTableViewCell" customModule="campus_artworks" customModuleProvider="target">
@@ -116,6 +122,7 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="f7S-Yx-jdZ"/>
                                 <constraints>
                                     <constraint firstItem="vWO-gq-bE9" firstAttribute="height" secondItem="xLB-n5-IqO" secondAttribute="height" multiplier="0.4" id="KRW-qn-cUD"/>
                                 </constraints>
@@ -132,6 +139,7 @@
                                 </variation>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="4NR-jy-S10"/>
                         <constraints>
                             <constraint firstItem="xLB-n5-IqO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BCS-WE-epY"/>
                             <constraint firstItem="xLB-n5-IqO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QEl-Ml-ahO"/>
@@ -172,7 +180,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="43G-yr-Ceh"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="vWO-gq-bE9" id="BjX-Xi-W9S"/>
                         <outlet property="table" destination="TcI-cJ-6uD" id="d0p-Rf-r00"/>
