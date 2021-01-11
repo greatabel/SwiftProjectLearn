@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5C9FE8625A56EF900E717B4"
-               BuildableName = "campus_museum.app"
-               BlueprintName = "campus_museum"
-               ReferencedContainer = "container:campus_museum.xcodeproj">
+               BuildableName = "campus_artworks.app"
+               BlueprintName = "campus_artworks"
+               ReferencedContainer = "container:campus_artworks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5C9FE9F25A56EFE00E717B4"
-               BuildableName = "campus_museumTests.xctest"
-               BlueprintName = "campus_museumTests"
-               ReferencedContainer = "container:campus_museum.xcodeproj">
+               BuildableName = "campus_artworksTests.xctest"
+               BlueprintName = "campus_artworksTests"
+               ReferencedContainer = "container:campus_artworks.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5C9FEAA25A56EFE00E717B4"
-               BuildableName = "campus_museumUITests.xctest"
-               BlueprintName = "campus_museumUITests"
-               ReferencedContainer = "container:campus_museum.xcodeproj">
+               BuildableName = "campus_artworksUITests.xctest"
+               BlueprintName = "campus_artworksUITests"
+               ReferencedContainer = "container:campus_artworks.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5C9FE8625A56EF900E717B4"
-            BuildableName = "campus_museum.app"
-            BlueprintName = "campus_museum"
-            ReferencedContainer = "container:campus_museum.xcodeproj">
+            BuildableName = "campus_artworks.app"
+            BlueprintName = "campus_artworks"
+            ReferencedContainer = "container:campus_artworks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5C9FE8625A56EF900E717B4"
-            BuildableName = "campus_museum.app"
-            BlueprintName = "campus_museum"
-            ReferencedContainer = "container:campus_museum.xcodeproj">
+            BuildableName = "campus_artworks.app"
+            BlueprintName = "campus_artworks"
+            ReferencedContainer = "container:campus_artworks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
