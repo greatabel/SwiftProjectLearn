@@ -273,12 +273,13 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         //add the cooresponding item in the array
         tappedArt.removeAll()
         tappedArt.append(buildingGroup[indexPath.section].artWorksInSide[indexPath.row])
-//        let loginVC =
-//            UIStoryboard(name: "Main",
-//                         bundle: nil).instantiateViewController(
-//                            withIdentifier: "detailViewController") as! detailViewController
-//        self.present(loginVC, animated: true, completion: nil)
-        performSegue(withIdentifier: "show_detail", sender: self)
+        let detailVC =
+            UIStoryboard(name: "Main",
+                         bundle: nil).instantiateViewController(
+                            withIdentifier: "detailViewController") as! detailViewController
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
+//        performSegue(withIdentifier: "show_detail", sender: self)
 //        self.navigationController?.pushViewController(loginVC, animated: true)
         
     }
@@ -363,7 +364,13 @@ MKMapViewDelegate,CLLocationManagerDelegate{
 //                             bundle: nil).instantiateViewController(
 //                                withIdentifier: "detailViewController") as! detailViewController
 //            self.present(loginVC, animated: true, completion: nil)
-            performSegue(withIdentifier: "show_detail", sender: self)
+//            performSegue(withIdentifier: "show_detail", sender: self)
+            let detailVC =
+                UIStoryboard(name: "Main",
+                             bundle: nil).instantiateViewController(
+                                withIdentifier: "detailViewController") as! detailViewController
+            detailVC.modalPresentationStyle = .fullScreen
+            self.present(detailVC, animated: true, completion: nil)
         }
         
         
