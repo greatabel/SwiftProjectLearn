@@ -4,7 +4,7 @@ import UIKit
 class viewControllerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myTextView: UITextView!
-    @IBOutlet weak var myImage: UIImageView!
+//    @IBOutlet weak var myImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -14,8 +14,8 @@ class viewControllerTableViewCell: UITableViewCell {
     //aetwork information
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        myImage.layer.masksToBounds = true
-        myImage.layer.cornerRadius = 10;
+//        myImage.layer.masksToBounds = true
+//        myImage.layer.cornerRadius = 10;
         //Configure the view for the selected state 
     }
 

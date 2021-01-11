@@ -53,6 +53,9 @@ MKMapViewDelegate,CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.toolbar.isHidden = true
+        view.insetsLayoutMarginsFromSafeArea = false
+        
         loadBuildingInSection();
         //reset the cell height
         //table.estimatedRowHeight = 100
@@ -218,11 +221,11 @@ MKMapViewDelegate,CLLocationManagerDelegate{
 //            Title: \(artInstance.title!) \n
 //            Artist: \(artInstance.artist!) \n
 //            """
-            let data = artInstance.imageData
-            let img = UIImage(data:data! as Data)
+//            let data = artInstance.imageData
+//            let img = UIImage(data:data! as Data)
             
 //            cell.myTextView.text = text
-            cell.myImage.image = img
+//            cell.myImage.image = img
             
             //cell.textLabel?.text = artInstance.location
         }

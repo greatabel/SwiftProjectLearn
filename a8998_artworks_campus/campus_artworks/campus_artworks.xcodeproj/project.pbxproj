@@ -173,6 +173,7 @@
 		B5C9FEE425A59EDD00E717B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */,
 				B5C9FEE825A59EF900E717B4 /* Artworks+CoreDataClass.swift */,
 				B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */,
 				B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */,
@@ -184,7 +185,6 @@
 		B5C9FEFD25A5A44900E717B4 /* supported_files */ = {
 			isa = PBXGroup;
 			children = (
-				B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */,
 				B5C9FEFE25A5A45C00E717B4 /* Ashton campus walk v2.gpx */,
 			);
 			path = supported_files;
