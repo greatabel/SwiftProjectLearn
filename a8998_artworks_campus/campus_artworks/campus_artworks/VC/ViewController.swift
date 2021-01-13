@@ -5,7 +5,6 @@ import CoreLocation
 import SystemConfiguration
 
 var tappedArt = [Artworks]()
-//var artInCell = [Artworks]()
 
 //the main viewController for the map
 class ViewController: UIViewController,
@@ -91,11 +90,6 @@ MKMapViewDelegate,CLLocationManagerDelegate{
         
         
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.edgesForExtendedLayout = []
-//    }
     
     
     override func viewDidAppear(_ animated: Bool){
@@ -220,17 +214,7 @@ MKMapViewDelegate,CLLocationManagerDelegate{
 
             cell.myTextView.attributedText = attributedText
             
-//            let text = """
-//            Title: \(artInstance.title!) \n
-//            Artist: \(artInstance.artist!) \n
-//            """
-//            let data = artInstance.imageData
-//            let img = UIImage(data:data! as Data)
-            
-//            cell.myTextView.text = text
-//            cell.myImage.image = img
-            
-            //cell.textLabel?.text = artInstance.location
+
         }
         return cell
     }
@@ -283,9 +267,7 @@ MKMapViewDelegate,CLLocationManagerDelegate{
 //        self.navigationController?.pushViewController(loginVC, animated: true)
         
     }
-    //__________________________________________________________________________
-    //                           map view part
-    //__________________________________________________________________________
+
     
     //when app update the map the image will cache itself
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -326,15 +308,14 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                             imageView.image = UIImage(data:data! as Data)
                             imageView.contentMode = .scaleAspectFit
                             annotationView!.leftCalloutAccessoryView = imageView
-//
-//                            print("annotationView width: \(annotationView!.frame.width) \(annotationView!.frame.height)")
+
+
                         }
                     }
                 }
             }
             
-//            annotationView?.glyphText = "🖼"
-//            annotationView?.markerTintColor = UIColor.black
+
             
         }else {
             annotationView?.annotation = annotation
@@ -359,12 +340,7 @@ MKMapViewDelegate,CLLocationManagerDelegate{
                 }
             }
             
-//            let loginVC =
-//                UIStoryboard(name: "Main",
-//                             bundle: nil).instantiateViewController(
-//                                withIdentifier: "detailViewController") as! detailViewController
-//            self.present(loginVC, animated: true, completion: nil)
-//            performSegue(withIdentifier: "show_detail", sender: self)
+
             let detailVC =
                 UIStoryboard(name: "Main",
                              bundle: nil).instantiateViewController(

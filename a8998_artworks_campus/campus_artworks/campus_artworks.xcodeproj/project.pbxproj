@@ -16,7 +16,7 @@
 		B5C9FEA525A56EFE00E717B4 /* campus_museumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEA425A56EFE00E717B4 /* campus_museumTests.swift */; };
 		B5C9FEB025A56EFE00E717B4 /* campus_museumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEAF25A56EFE00E717B4 /* campus_museumUITests.swift */; };
 		B5C9FEC225A59C5900E717B4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */; };
-		B5C9FEC825A59D2900E717B4 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEC725A59D2900E717B4 /* LoadData.swift */; };
+		B5C9FEC825A59D2900E717B4 /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEC725A59D2900E717B4 /* DownloadData.swift */; };
 		B5C9FEE025A59EA900E717B4 /* campus_museum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */; };
 		B5C9FEE925A59EFA00E717B4 /* Artworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */; };
 		B5C9FEEA25A59EFA00E717B4 /* LastAccessDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */; };
@@ -60,7 +60,7 @@
 		B5C9FEAF25A56EFE00E717B4 /* campus_museumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = campus_museumUITests.swift; sourceTree = "<group>"; };
 		B5C9FEB125A56EFE00E717B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
-		B5C9FEC725A59D2900E717B4 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		B5C9FEC725A59D2900E717B4 /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
 		B5C9FEDF25A59EA900E717B4 /* COMP327_Assignment2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = COMP327_Assignment2.xcdatamodel; sourceTree = "<group>"; };
 		B5C9FEE525A59EF900E717B4 /* Artworks+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LastAccessDate+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,13 +119,15 @@
 		B5C9FE8925A56EF900E717B4 /* campus_artworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5C9FEFD25A5A44900E717B4 /* supported_files */,
-				B5C9FEE425A59EDD00E717B4 /* Model */,
-				B5C9FEC625A59CE000E717B4 /* Controller */,
-				B5C9FEC025A59B4400E717B4 /* View */,
+				B5C9FEFD25A5A44900E717B4 /* related_files */,
+				B5C9FEE425A59EDD00E717B4 /* ModelAndData */,
+				B5C9FEC625A59CE000E717B4 /* VC */,
 				B5C9FE8A25A56EF900E717B4 /* AppDelegate.swift */,
+				B5C9FE9025A56EF900E717B4 /* Main.storyboard */,
+				B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */,
+				B5C9FE9825A56EFE00E717B4 /* LaunchScreen.storyboard */,
 				B5C9FE8C25A56EF900E717B4 /* SceneDelegate.swift */,
-				B5C9FEC725A59D2900E717B4 /* LoadData.swift */,
+				B5C9FEC725A59D2900E717B4 /* DownloadData.swift */,
 				B5C9FE9B25A56EFE00E717B4 /* Info.plist */,
 			);
 			path = campus_artworks;
@@ -149,17 +151,7 @@
 			path = campus_museumUITests;
 			sourceTree = "<group>";
 		};
-		B5C9FEC025A59B4400E717B4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B5C9FE9025A56EF900E717B4 /* Main.storyboard */,
-				B5C9FE9625A56EFE00E717B4 /* Assets.xcassets */,
-				B5C9FE9825A56EFE00E717B4 /* LaunchScreen.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B5C9FEC625A59CE000E717B4 /* Controller */ = {
+		B5C9FEC625A59CE000E717B4 /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				B5C9FEF825A5A40900E717B4 /* viewControllerTableViewCell.swift */,
@@ -167,10 +159,10 @@
 				B5C9FEC125A59C5900E717B4 /* WelcomeVC.swift */,
 				B5C9FEF325A5A3A500E717B4 /* detailViewController.swift */,
 			);
-			path = Controller;
+			path = VC;
 			sourceTree = "<group>";
 		};
-		B5C9FEE425A59EDD00E717B4 /* Model */ = {
+		B5C9FEE425A59EDD00E717B4 /* ModelAndData */ = {
 			isa = PBXGroup;
 			children = (
 				B5C9FEDE25A59EA900E717B4 /* campus_museum.xcdatamodeld */,
@@ -179,15 +171,15 @@
 				B5C9FEE625A59EF900E717B4 /* LastAccessDate+CoreDataClass.swift */,
 				B5C9FEE725A59EF900E717B4 /* LastAccessDate+CoreDataProperties.swift */,
 			);
-			path = Model;
+			path = ModelAndData;
 			sourceTree = "<group>";
 		};
-		B5C9FEFD25A5A44900E717B4 /* supported_files */ = {
+		B5C9FEFD25A5A44900E717B4 /* related_files */ = {
 			isa = PBXGroup;
 			children = (
 				B5C9FEFE25A5A45C00E717B4 /* Ashton campus walk v2.gpx */,
 			);
-			path = supported_files;
+			path = related_files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +324,7 @@
 				B5C9FE8B25A56EF900E717B4 /* AppDelegate.swift in Sources */,
 				B5C9FE8D25A56EF900E717B4 /* SceneDelegate.swift in Sources */,
 				B5C9FEE025A59EA900E717B4 /* campus_museum.xcdatamodeld in Sources */,
-				B5C9FEC825A59D2900E717B4 /* LoadData.swift in Sources */,
+				B5C9FEC825A59D2900E717B4 /* DownloadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

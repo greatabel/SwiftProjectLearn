@@ -2,10 +2,7 @@ import UIKit
 import CoreData
 import SystemConfiguration
 
-//this class is used to check the network connection
-//the button wil guide user into the app anyway this is just a view to prompt
-//user that do we have internet or not. if yes all the data will be new data
-//if not the data shown on the table and map might be the data loaded last time
+
 public class Reachability {
     
     class func isConnectedToNetwork() -> Bool {
@@ -54,9 +51,7 @@ class WelcomeVC: UIViewController {
     }
 
     @IBAction func enter_action(_ sender: Any) {
-        // enter main-vc
-        // https://stackoverflow.com/questions/62571146/how-to-hide-top-space-showing-previous-viewcontroller-hierarchy-on-xcode-ios-swi
-        
+
         let mainVC =
             UIStoryboard(name: "Main",
                          bundle: nil).instantiateViewController(

@@ -55,9 +55,7 @@ class LoadData{
         //is set to true
         if flag == true{
             
-        //if the amount of the artwork data is 0 in core data
-        //checkDataExist will be false means this is the first time opening the
-        //App all data need to be load
+
         if checkDataExist() == false {
             _ = loadJasonFromURL(date: "2020-12-13")
             

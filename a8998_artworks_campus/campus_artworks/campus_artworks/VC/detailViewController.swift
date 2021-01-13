@@ -16,19 +16,7 @@ class detailViewController: UIViewController, UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         navigation.title = tappedArt[0].location
         ByLbl.text = "By " + tappedArt[0].artist!
-//        navigationItem.title = "Title"
-//        let buildTitle = UIBarButtonItem()
 
-        //set the title for the bar at the buttom
-//        buildTitle.title = tappedArt[0].location
-//        //set the width of the bar maximum
-//        buildTitle.width = -5
-//        buildTitle.tintColor = UIColor.black
-//        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-//         negativeSpacer.width = 350
-//
-//         self.navigationItem.rightBarButtonItems = [negativeSpacer,buildTitle]
-        
         table.reloadData()
         // Do any additional setup after loading the view.
     }
