@@ -10,6 +10,9 @@ enum Triathlon {
     case halfIronman
     case ironman
     
+    /// distance that accept different sport
+    /// - Parameter sport: sport type
+    /// - Returns: distance (unit meter) of the input sport
     func distance(for sport: Sport) -> Int {
         let meter: Int
         switch (self, sport) {
