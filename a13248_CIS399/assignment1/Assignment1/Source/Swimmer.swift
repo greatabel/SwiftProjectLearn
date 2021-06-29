@@ -4,3 +4,13 @@
 //
 
 
+class Swimmer: Athlete {
+    
+    
+    override var favoriteSport: Sport? {
+        get {
+            return Sport.swimming
+        }
+    }
+
+}
