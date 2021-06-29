@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='osx' display-mode='rendered'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='SportEnum'/>
+        <page name='ValidateWithTests'/>
+        <page name='TriathlonEnum'/>
+        <page name='ParticipantProtocolAndExtension'/>
+        <page name='AthleteClass'/>
+        <page name='SwimmerClass'/>
+        <page name='CyclistClass'/>
+        <page name='RunnerClass'/>
+        <page name='TriathlonEventClass'/>
+        <page name='Main'/>
+        <page name='RunningUnitTestsAndOutput'/>
+    </pages>
+</playground>

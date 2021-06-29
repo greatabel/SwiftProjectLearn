@@ -1,0 +1,6 @@
+//
+//  Triathlon.swift
+//  Assignment1
+//
+
+

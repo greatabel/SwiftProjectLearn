@@ -1,0 +1,6 @@
+//
+//  Participant.swift
+//  Assignment1
+//
+
+
