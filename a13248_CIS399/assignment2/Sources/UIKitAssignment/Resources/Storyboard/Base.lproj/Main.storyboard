@@ -22,11 +22,12 @@
                                 <rect key="frame" x="143" y="318.5" width="89" height="30"/>
                                 <state key="normal" title="Show Details"/>
                                 <connections>
-                                    <segue destination="IyP-jf-2vR" kind="show" id="VBc-ZB-TTJ"/>
+                                    <segue destination="IyP-jf-2vR" kind="show" identifier="infoDetail" id="VBc-ZB-TTJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The detail action has been performed 0 times" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fo-pa-6kA">
                                 <rect key="frame" x="14" y="356" width="347" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailActionCount"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,15 +49,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="LblCount" destination="5fo-pa-6kA" id="beD-ym-gz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="cP2-3w-K3c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1420" y="115.59220389805098"/>
         </scene>
         <!--Modal View-->
         <scene sceneID="4ae-Co-f0u">
             <objects>
-                <viewController title="Modal View" id="qqA-PG-Kgi" customClass="ModalViewController" customModule="UIKitAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Modal View" id="qqA-PG-Kgi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FfF-XT-nyR"/>
                         <viewControllerLayoutGuide type="bottom" id="7Ae-hM-V73"/>
@@ -65,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-5H-IMi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-5H-IMi">
                                 <rect key="frame" x="20" y="76" width="335" height="551"/>
                             </imageView>
                         </subviews>
@@ -82,6 +87,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="y8B-d1-kHZ">
                             <connections>
                                 <action selector="sendData:" destination="qqA-PG-Kgi" id="4bX-ew-R1k"/>
+                                <segue destination="cP2-3w-K3c" kind="unwind" unwindAction="unwindToThisViewControllerWithSegue:" id="BCZ-ai-x7H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,6 +120,9 @@
                                     <constraint firstAttribute="height" constant="30" id="wL9-8o-g2x"/>
                                 </constraints>
                                 <state key="normal" title="Perform Action"/>
+                                <connections>
+                                    <action selector="clickAction:" destination="IyP-jf-2vR" eventType="touchUpInside" id="4Hu-7I-Roj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,7 +173,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qqA-PG-Kgi" kind="relationship" relationship="rootViewController" id="viV-oB-FAV"/>
+                        <segue destination="qqA-PG-Kgi" kind="relationship" relationship="rootViewController" destinationCreationSelector="modelviewSegue" id="viV-oB-FAV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thU-Nn-8ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,6 +182,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background.jpeg" width="1080" height="1920"/>
+        <image name="bg" width="540" height="960"/>
     </resources>
 </document>

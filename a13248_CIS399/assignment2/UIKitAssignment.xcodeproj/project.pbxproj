@@ -15,7 +15,7 @@
 		56CA5FE6268B67CC00CE5CEA /* UIKitAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CA5FE5268B67CC00CE5CEA /* UIKitAssignmentUITests.swift */; };
 		B53BCCA626938046002E6959 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BCCA326938046002E6959 /* DetailViewController.swift */; };
 		B53BCCA726938046002E6959 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BCCA426938046002E6959 /* MainViewController.swift */; };
-		B53BCCA826938046002E6959 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BCCA526938046002E6959 /* ModalViewController.swift */; };
+		B53BCCAC26938A7D002E6959 /* DetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BCCAB26938A7D002E6959 /* DetailViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		56CA5FE7268B67CC00CE5CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B53BCCA326938046002E6959 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B53BCCA426938046002E6959 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B53BCCA526938046002E6959 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		B53BCCAB26938A7D002E6959 /* DetailViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +146,9 @@
 			children = (
 				B53BCCA326938046002E6959 /* DetailViewController.swift */,
 				B53BCCA426938046002E6959 /* MainViewController.swift */,
-				B53BCCA526938046002E6959 /* ModalViewController.swift */,
 				56CA5FC3268B67CB00CE5CEA /* AppDelegate.swift */,
 				56CA5FC5268B67CB00CE5CEA /* SceneDelegate.swift */,
+				B53BCCAB26938A7D002E6959 /* DetailViewControllerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53BCCAC26938A7D002E6959 /* DetailViewControllerDelegate.swift in Sources */,
 				B53BCCA626938046002E6959 /* DetailViewController.swift in Sources */,
-				B53BCCA826938046002E6959 /* ModalViewController.swift in Sources */,
 				56CA5FC4268B67CB00CE5CEA /* AppDelegate.swift in Sources */,
 				56CA5FC6268B67CB00CE5CEA /* SceneDelegate.swift in Sources */,
 				B53BCCA726938046002E6959 /* MainViewController.swift in Sources */,

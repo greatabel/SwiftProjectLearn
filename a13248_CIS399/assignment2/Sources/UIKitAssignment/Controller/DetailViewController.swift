@@ -1,8 +1,15 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    static var presentedCount = 0
+
     
+    weak var delegate:DetailViewControllerDelegate?
+    
+    @IBAction func clickAction(_ sender: Any) {
+        
+        delegate?.detailViewControllerDidPerformAction(sender: self)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,9 +29,10 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    static func incrementalCount() ->Int{
-        presentedCount += 1
-        return presentedCount
-    }
+ 
     @IBOutlet weak var presentedLabel: UILabel!
+    
+
 }
+
+
