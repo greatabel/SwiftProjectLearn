@@ -17,10 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h1" translatesAutoresizingMaskIntoConstraints="NO" id="Zvt-pG-ZgS">
+                                <rect key="frame" x="35" y="58" width="344" height="399"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="y5i-OA-IJa"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5na-L8-L7b">
-                                <rect key="frame" x="119.5" y="120" width="175" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="New Download"/>
+                                <rect key="frame" x="93" y="719" width="228" height="41"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Cuo-lS-GZ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next Log Check In 12:00:00">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="newDownloadAction:" destination="FZf-tB-yb6" eventType="touchUpInside" id="7H9-Ze-0qW"/>
                                 </connections>
@@ -29,15 +41,19 @@
                         <viewLayoutGuide key="safeArea" id="bnI-3A-e7f"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="5na-L8-L7b" firstAttribute="top" secondItem="bnI-3A-e7f" secondAttribute="top" constant="76" id="DDQ-nN-sgC"/>
-                            <constraint firstItem="5na-L8-L7b" firstAttribute="centerX" secondItem="bnI-3A-e7f" secondAttribute="centerX" id="pVE-j2-zOH"/>
+                            <constraint firstItem="Zvt-pG-ZgS" firstAttribute="top" secondItem="bnI-3A-e7f" secondAttribute="top" constant="14" id="2Cq-RT-1db"/>
+                            <constraint firstItem="bnI-3A-e7f" firstAttribute="bottom" secondItem="5na-L8-L7b" secondAttribute="bottom" constant="53" id="cvj-SS-Aij"/>
+                            <constraint firstItem="Zvt-pG-ZgS" firstAttribute="leading" secondItem="bnI-3A-e7f" secondAttribute="leading" constant="35" id="kHe-Jm-mbu"/>
+                            <constraint firstItem="5na-L8-L7b" firstAttribute="leading" secondItem="bnI-3A-e7f" secondAttribute="leading" constant="93" id="rLe-YK-yUD"/>
+                            <constraint firstItem="5na-L8-L7b" firstAttribute="centerX" secondItem="Zvt-pG-ZgS" secondAttribute="centerX" id="uz1-2f-3tm"/>
+                            <constraint firstItem="Zvt-pG-ZgS" firstAttribute="centerX" secondItem="jKE-5K-lvb" secondAttribute="centerX" id="vnC-uL-bJz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home_icon" id="jAL-Jd-BPA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmY-e6-lYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-716" y="-289"/>
+            <point key="canvasLocation" x="-717.39130434782612" y="-289.28571428571428"/>
         </scene>
         <!--DownloadsVC-->
         <scene sceneID="WYN-ec-YxY">
@@ -136,11 +152,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="h1" width="288" height="444"/>
         <image name="history_icon" width="22" height="25.5"/>
         <image name="home_icon" width="15" height="24.5"/>
         <image name="people_icon" width="21" height="24.5"/>
         <image name="test_icon" width="12.5" height="24"/>
         <image name="write_icon" width="13.5" height="11.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -149,6 +169,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
