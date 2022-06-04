@@ -707,7 +707,7 @@
 				78425354228CFC6A0055454C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		78425355228CFC6A0055454C /* Build configuration list for PBXNativeTarget "MyWeibo_App" */ = {
 			isa = XCConfigurationList;
@@ -716,7 +716,7 @@
 				78425357228CFC6A0055454C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		78425358228CFC6A0055454C /* Build configuration list for PBXNativeTarget "MyWeibo_AppTests" */ = {
 			isa = XCConfigurationList;
@@ -725,7 +725,7 @@
 				7842535A228CFC6A0055454C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7842535B228CFC6A0055454C /* Build configuration list for PBXNativeTarget "MyWeibo_AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -734,7 +734,7 @@
 				7842535D228CFC6A0055454C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
