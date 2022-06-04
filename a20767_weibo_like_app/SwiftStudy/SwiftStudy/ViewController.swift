@@ -75,17 +75,38 @@ class ViewController: UIViewController {
         }
     }
     func setupUI() {
-        self.navigationItem.title = "One Piece"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "ClearCache", style: UIBarButtonItem.Style.done, target: self, action: #selector(clearCache))
+        self.navigationItem.title = "微博列表模拟"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "注册/登录", style: UIBarButtonItem.Style.done, target: self, action: #selector(jump_login_register))
+        
+//        let backBTN = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: AbelLoginRegisterVC.self,
+//        action: #selector(UINavigationController.popViewController(animated:)))
+
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "login/register", style: UIBarButtonItem.Style.plain, target: AbelLoginRegisterVC.self, action: #selector(jump_login_register))
+//
+        
         self.view.addSubview(self.tableView)
     }
     
     // MARK: Events
-    @objc func clearCache() {
-        ImageCache.default.clearMemoryCache()
-        ImageCache.default.clearDiskCache {
-            print("图片清除缓存完毕")
-        }
+//    @objc func clearCache() {
+//        ImageCache.default.clearMemoryCache()
+//        ImageCache.default.clearDiskCache {
+//            print("图片清除缓存完毕")
+//        }
+//    }
+    
+    
+    @objc func jump_login_register() {
+        
+//          //实例化一个登陆界面
+//          let loginView = AbelLoginRegisterVC()
+//          //从下弹出一个界面作为登陆界面，completion作为闭包，可以写一些弹出loginView时的一些操作
+//        self.present(loginView, animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AbelLoginRegisterVC") as! AbelLoginRegisterVC
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("jump_login_register")
     }
     
 }

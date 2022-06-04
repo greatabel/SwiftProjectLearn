@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SwiftStudy.xcodeproj">
+      location = "group:/Users/abel/AbelProject/SwiftProjectLearn/a20767_weibo_like_app/SwiftStudy/MyWeibo_App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
