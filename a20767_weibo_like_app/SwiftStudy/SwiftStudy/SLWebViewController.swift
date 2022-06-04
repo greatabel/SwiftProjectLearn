@@ -22,7 +22,7 @@ class SLWebViewController: UIViewController {
         return progressView
     }()
     //默认值
-    var urlStr: String = "https://www.jianshu.com/u/e15d1f644bea"
+    var urlStr: String = "https://www.jianshu.com/u/f852e8ec5744"
     
     override func viewDidLoad() {
         super.viewDidLoad()

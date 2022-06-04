@@ -234,6 +234,7 @@ class SLTableViewCell: UITableViewCell {
     
     // MARK: Events
     @objc func followBtnClicked(followBtn: UIButton) {
+        print("---------------------\n")
         print("已关注")
     }
     @objc func tapPicture(tap: UITapGestureRecognizer) {

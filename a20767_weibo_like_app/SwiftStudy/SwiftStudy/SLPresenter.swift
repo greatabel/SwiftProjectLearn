@@ -123,7 +123,7 @@ class SLPresenter: NSObject{
         //@用户匹配
         let userRanges:[NSRange] = getRangesFromResult(regexStr: KRegularMatcheUser,title: attributedString.string)
         for range in userRanges {
-            attributedString.addAttributes([NSAttributedString.Key.link :"https://www.jianshu.com/u/e15d1f644bea"], range: range)
+            attributedString.addAttributes([NSAttributedString.Key.link :"https://www.jianshu.com/u/f852e8ec5744"], range: range)
             //如果最多字符个数会截断高亮字符，则舍去高亮字符
             if cutoffLocation >= range.location && cutoffLocation <= range.location + range.length {
                 cutoffLocation = range.location
